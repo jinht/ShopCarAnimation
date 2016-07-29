@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78E75C0C1D49F8AA0065EBA8 /* AnimationRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E75C0B1D49F8AA0065EBA8 /* AnimationRecordModel.m */; };
+		78E75C0F1D49F9880065EBA8 /* AnimationRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E75C0E1D49F9880065EBA8 /* AnimationRecordCell.m */; };
+		A54304F31D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A54304F21D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK.a */; };
+		A5EA2EF11D49EBAA007217DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2EF01D49EBAA007217DE /* main.m */; };
+		A5EA2EF41D49EBAA007217DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2EF31D49EBAA007217DE /* AppDelegate.m */; };
+		A5EA2EFA1D49EBAA007217DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EA2EF81D49EBAA007217DE /* Main.storyboard */; };
+		A5EA2EFC1D49EBAA007217DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5EA2EFB1D49EBAA007217DE /* Assets.xcassets */; };
+		A5EA2EFF1D49EBAA007217DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EA2EFD1D49EBAA007217DE /* LaunchScreen.storyboard */; };
+		A5EA2F0A1D49EBAA007217DE /* JhtShopCarAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2F091D49EBAA007217DE /* JhtShopCarAnimationTests.m */; };
+		A5EA2F151D49EBAA007217DE /* JhtShopCarAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2F141D49EBAA007217DE /* JhtShopCarAnimationUITests.m */; };
+		A5EA2F2B1D49F57F007217DE /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2F2A1D49F57F007217DE /* AnimationViewController.m */; };
+		A5EA2F2E1D49F5B1007217DE /* JhtShopCarAnimationImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5EA2F2D1D49F5B1007217DE /* JhtShopCarAnimationImages.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5EA2F061D49EBAA007217DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5EA2EE41D49EBAA007217DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5EA2EEB1D49EBAA007217DE;
+			remoteInfo = JhtShopCarAnimation;
+		};
+		A5EA2F111D49EBAA007217DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5EA2EE41D49EBAA007217DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5EA2EEB1D49EBAA007217DE;
+			remoteInfo = JhtShopCarAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		78E75C0A1D49F8AA0065EBA8 /* AnimationRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationRecordModel.h; sourceTree = "<group>"; };
+		78E75C0B1D49F8AA0065EBA8 /* AnimationRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationRecordModel.m; sourceTree = "<group>"; };
+		78E75C0D1D49F9880065EBA8 /* AnimationRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationRecordCell.h; sourceTree = "<group>"; };
+		78E75C0E1D49F9880065EBA8 /* AnimationRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationRecordCell.m; sourceTree = "<group>"; };
+		A54304F11D4B4B0A00D7FB7E /* JhtAnimationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhtAnimationTools.h; sourceTree = "<group>"; };
+		A54304F21D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JhtShopCarAnimationSDK.a; sourceTree = "<group>"; };
+		A5EA2EEC1D49EBAA007217DE /* JhtShopCarAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JhtShopCarAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5EA2EF01D49EBAA007217DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5EA2EF21D49EBAA007217DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A5EA2EF31D49EBAA007217DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A5EA2EF91D49EBAA007217DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5EA2EFB1D49EBAA007217DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5EA2EFE1D49EBAA007217DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5EA2F001D49EBAA007217DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5EA2F051D49EBAA007217DE /* JhtShopCarAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhtShopCarAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5EA2F091D49EBAA007217DE /* JhtShopCarAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhtShopCarAnimationTests.m; sourceTree = "<group>"; };
+		A5EA2F0B1D49EBAA007217DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5EA2F101D49EBAA007217DE /* JhtShopCarAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhtShopCarAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5EA2F141D49EBAA007217DE /* JhtShopCarAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhtShopCarAnimationUITests.m; sourceTree = "<group>"; };
+		A5EA2F161D49EBAA007217DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5EA2F291D49F57F007217DE /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		A5EA2F2A1D49F57F007217DE /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		A5EA2F2D1D49F5B1007217DE /* JhtShopCarAnimationImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JhtShopCarAnimationImages.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5EA2EE91D49EBAA007217DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54304F31D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5EA2F021D49EBAA007217DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5EA2F0D1D49EBAA007217DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78E75C081D49F8630065EBA8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				78E75C0A1D49F8AA0065EBA8 /* AnimationRecordModel.h */,
+				78E75C0B1D49F8AA0065EBA8 /* AnimationRecordModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		78E75C091D49F8680065EBA8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				78E75C0D1D49F9880065EBA8 /* AnimationRecordCell.h */,
+				78E75C0E1D49F9880065EBA8 /* AnimationRecordCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A54304F01D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A54304F11D4B4B0A00D7FB7E /* JhtAnimationTools.h */,
+				A54304F21D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK.a */,
+			);
+			path = JhtShopCarAnimationSDK;
+			sourceTree = "<group>";
+		};
+		A5EA2EE31D49EBAA007217DE = {
+			isa = PBXGroup;
+			children = (
+				A5EA2EEE1D49EBAA007217DE /* JhtShopCarAnimation */,
+				A5EA2F081D49EBAA007217DE /* JhtShopCarAnimationTests */,
+				A5EA2F131D49EBAA007217DE /* JhtShopCarAnimationUITests */,
+				A5EA2EED1D49EBAA007217DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5EA2EED1D49EBAA007217DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5EA2EEC1D49EBAA007217DE /* JhtShopCarAnimation.app */,
+				A5EA2F051D49EBAA007217DE /* JhtShopCarAnimationTests.xctest */,
+				A5EA2F101D49EBAA007217DE /* JhtShopCarAnimationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5EA2EEE1D49EBAA007217DE /* JhtShopCarAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				A5EA2EF21D49EBAA007217DE /* AppDelegate.h */,
+				A5EA2EF31D49EBAA007217DE /* AppDelegate.m */,
+				A5EA2F281D49F57F007217DE /* Controller */,
+				78E75C081D49F8630065EBA8 /* model */,
+				78E75C091D49F8680065EBA8 /* view */,
+				A54304F01D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK */,
+				A5EA2F2C1D49F5B1007217DE /* JhtTemp */,
+				A5EA2EF81D49EBAA007217DE /* Main.storyboard */,
+				A5EA2EFB1D49EBAA007217DE /* Assets.xcassets */,
+				A5EA2EFD1D49EBAA007217DE /* LaunchScreen.storyboard */,
+				A5EA2F001D49EBAA007217DE /* Info.plist */,
+				A5EA2EEF1D49EBAA007217DE /* Supporting Files */,
+			);
+			path = JhtShopCarAnimation;
+			sourceTree = "<group>";
+		};
+		A5EA2EEF1D49EBAA007217DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5EA2EF01D49EBAA007217DE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5EA2F081D49EBAA007217DE /* JhtShopCarAnimationTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5EA2F091D49EBAA007217DE /* JhtShopCarAnimationTests.m */,
+				A5EA2F0B1D49EBAA007217DE /* Info.plist */,
+			);
+			path = JhtShopCarAnimationTests;
+			sourceTree = "<group>";
+		};
+		A5EA2F131D49EBAA007217DE /* JhtShopCarAnimationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A5EA2F141D49EBAA007217DE /* JhtShopCarAnimationUITests.m */,
+				A5EA2F161D49EBAA007217DE /* Info.plist */,
+			);
+			path = JhtShopCarAnimationUITests;
+			sourceTree = "<group>";
+		};
+		A5EA2F281D49F57F007217DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A5EA2F291D49F57F007217DE /* AnimationViewController.h */,
+				A5EA2F2A1D49F57F007217DE /* AnimationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A5EA2F2C1D49F5B1007217DE /* JhtTemp */ = {
+			isa = PBXGroup;
+			children = (
+				A5EA2F2D1D49F5B1007217DE /* JhtShopCarAnimationImages.bundle */,
+			);
+			path = JhtTemp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5EA2EEB1D49EBAA007217DE /* JhtShopCarAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5EA2F191D49EBAA007217DE /* Build configuration list for PBXNativeTarget "JhtShopCarAnimation" */;
+			buildPhases = (
+				A5EA2EE81D49EBAA007217DE /* Sources */,
+				A5EA2EE91D49EBAA007217DE /* Frameworks */,
+				A5EA2EEA1D49EBAA007217DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JhtShopCarAnimation;
+			productName = JhtShopCarAnimation;
+			productReference = A5EA2EEC1D49EBAA007217DE /* JhtShopCarAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5EA2F041D49EBAA007217DE /* JhtShopCarAnimationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5EA2F1C1D49EBAA007217DE /* Build configuration list for PBXNativeTarget "JhtShopCarAnimationTests" */;
+			buildPhases = (
+				A5EA2F011D49EBAA007217DE /* Sources */,
+				A5EA2F021D49EBAA007217DE /* Frameworks */,
+				A5EA2F031D49EBAA007217DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5EA2F071D49EBAA007217DE /* PBXTargetDependency */,
+			);
+			name = JhtShopCarAnimationTests;
+			productName = JhtShopCarAnimationTests;
+			productReference = A5EA2F051D49EBAA007217DE /* JhtShopCarAnimationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A5EA2F0F1D49EBAA007217DE /* JhtShopCarAnimationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5EA2F1F1D49EBAA007217DE /* Build configuration list for PBXNativeTarget "JhtShopCarAnimationUITests" */;
+			buildPhases = (
+				A5EA2F0C1D49EBAA007217DE /* Sources */,
+				A5EA2F0D1D49EBAA007217DE /* Frameworks */,
+				A5EA2F0E1D49EBAA007217DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5EA2F121D49EBAA007217DE /* PBXTargetDependency */,
+			);
+			name = JhtShopCarAnimationUITests;
+			productName = JhtShopCarAnimationUITests;
+			productReference = A5EA2F101D49EBAA007217DE /* JhtShopCarAnimationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5EA2EE41D49EBAA007217DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Jht;
+				TargetAttributes = {
+					A5EA2EEB1D49EBAA007217DE = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = PVADC46YD2;
+					};
+					A5EA2F041D49EBAA007217DE = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = A5EA2EEB1D49EBAA007217DE;
+					};
+					A5EA2F0F1D49EBAA007217DE = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = A5EA2EEB1D49EBAA007217DE;
+					};
+				};
+			};
+			buildConfigurationList = A5EA2EE71D49EBAA007217DE /* Build configuration list for PBXProject "JhtShopCarAnimation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5EA2EE31D49EBAA007217DE;
+			productRefGroup = A5EA2EED1D49EBAA007217DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5EA2EEB1D49EBAA007217DE /* JhtShopCarAnimation */,
+				A5EA2F041D49EBAA007217DE /* JhtShopCarAnimationTests */,
+				A5EA2F0F1D49EBAA007217DE /* JhtShopCarAnimationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5EA2EEA1D49EBAA007217DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5EA2F2E1D49F5B1007217DE /* JhtShopCarAnimationImages.bundle in Resources */,
+				A5EA2EFF1D49EBAA007217DE /* LaunchScreen.storyboard in Resources */,
+				A5EA2EFC1D49EBAA007217DE /* Assets.xcassets in Resources */,
+				A5EA2EFA1D49EBAA007217DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5EA2F031D49EBAA007217DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5EA2F0E1D49EBAA007217DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5EA2EE81D49EBAA007217DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5EA2EF41D49EBAA007217DE /* AppDelegate.m in Sources */,
+				A5EA2EF11D49EBAA007217DE /* main.m in Sources */,
+				A5EA2F2B1D49F57F007217DE /* AnimationViewController.m in Sources */,
+				78E75C0C1D49F8AA0065EBA8 /* AnimationRecordModel.m in Sources */,
+				78E75C0F1D49F9880065EBA8 /* AnimationRecordCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5EA2F011D49EBAA007217DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5EA2F0A1D49EBAA007217DE /* JhtShopCarAnimationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5EA2F0C1D49EBAA007217DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5EA2F151D49EBAA007217DE /* JhtShopCarAnimationUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5EA2F071D49EBAA007217DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5EA2EEB1D49EBAA007217DE /* JhtShopCarAnimation */;
+			targetProxy = A5EA2F061D49EBAA007217DE /* PBXContainerItemProxy */;
+		};
+		A5EA2F121D49EBAA007217DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5EA2EEB1D49EBAA007217DE /* JhtShopCarAnimation */;
+			targetProxy = A5EA2F111D49EBAA007217DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5EA2EF81D49EBAA007217DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5EA2EF91D49EBAA007217DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A5EA2EFD1D49EBAA007217DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5EA2EFE1D49EBAA007217DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5EA2F171D49EBAA007217DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A5EA2F181D49EBAA007217DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5EA2F1A1D49EBAA007217DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = JhtShopCarAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JhtShopCarAnimation/JhtShopCarAnimationSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jht.JhtShopCarAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A5EA2F1B1D49EBAA007217DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = JhtShopCarAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JhtShopCarAnimation/JhtShopCarAnimationSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jht.JhtShopCarAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A5EA2F1D1D49EBAA007217DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JhtShopCarAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jht.JhtShopCarAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JhtShopCarAnimation.app/JhtShopCarAnimation";
+			};
+			name = Debug;
+		};
+		A5EA2F1E1D49EBAA007217DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JhtShopCarAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jht.JhtShopCarAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JhtShopCarAnimation.app/JhtShopCarAnimation";
+			};
+			name = Release;
+		};
+		A5EA2F201D49EBAA007217DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JhtShopCarAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jht.JhtShopCarAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JhtShopCarAnimation;
+			};
+			name = Debug;
+		};
+		A5EA2F211D49EBAA007217DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JhtShopCarAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jht.JhtShopCarAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JhtShopCarAnimation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5EA2EE71D49EBAA007217DE /* Build configuration list for PBXProject "JhtShopCarAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5EA2F171D49EBAA007217DE /* Debug */,
+				A5EA2F181D49EBAA007217DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5EA2F191D49EBAA007217DE /* Build configuration list for PBXNativeTarget "JhtShopCarAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5EA2F1A1D49EBAA007217DE /* Debug */,
+				A5EA2F1B1D49EBAA007217DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5EA2F1C1D49EBAA007217DE /* Build configuration list for PBXNativeTarget "JhtShopCarAnimationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5EA2F1D1D49EBAA007217DE /* Debug */,
+				A5EA2F1E1D49EBAA007217DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5EA2F1F1D49EBAA007217DE /* Build configuration list for PBXNativeTarget "JhtShopCarAnimationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5EA2F201D49EBAA007217DE /* Debug */,
+				A5EA2F211D49EBAA007217DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5EA2EE41D49EBAA007217DE /* Project object */;
+}
