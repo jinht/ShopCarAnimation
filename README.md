@@ -50,3 +50,8 @@
     /** 获得阻尼动画的黑色背景 */
     - (UIView *)aniGetDampingBlackView;
 ```
+
+## Hope
+* If you find bug when used，Hope you can Issues me，Thank you or try to download the latest code of this framework to see the BUG has been fixed or not
+* If you find the function is not enough when used，Hope you can Issues me，I very much to add more useful function to this framework ，Thank you !
+
