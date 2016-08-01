@@ -12,7 +12,7 @@
 
 ### 2.使用起来比较方便，只需导入 JhtAnimationTools.h 头文件即可。  <br>
     (1) 购物车动画 <br>
-    ```oc
+```oc
     /**
       * rect: 动画开始的坐标; 如果rect传CGRectZero,则用默认开始坐标;
       * imageView: 动画对应的imageView;
@@ -29,10 +29,10 @@
                animationValue:1.0f
      */
      - (void)aniStartShopCarAnimationWithStartRect:(CGRect)rect withImageView:(UIImageView *)imageView withView:(UIView *)view withEndPoint:(CGPoint)lastPoint withControlPoint:(CGPoint)controlPoint withStartToEndSpacePercentage:(NSInteger)per withExpandAnimationTime:(CFTimeInterval)expandAnimationTime withNarrowAnimationTime:(CFTimeInterval)narrowAnimationTime withAnimationValue:(CGFloat)animationValue;
-    ```
+```
     (2) 阻尼动画 <br>
      创建阻尼动画的View
-    ```oc
+```oc
     /** 获得的阻尼动画的View
       * view：黑色背景View的父view(例如:self.view);
       * frame：是这个阻尼View的坐标
@@ -40,5 +40,5 @@
       * bgColor：背景颜色
     */
      - (UIView *)aniDampingAnimationWithFView:(UIView *)view withFrame:(CGRect)frame withBackgroundColor:(UIColor *)bgColor isNeedBlackView:(BOOL)isBlack
-    ```
+```
     
