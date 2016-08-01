@@ -8,7 +8,7 @@
 
 
 ### 1.这是一个轻量级的动画文件，可以实现购物车的上抛 && 下抛动画；此外我还写了一个简单的阻尼动画，供大家交流使用！  <br>
-
+ <img src="https://raw.githubusercontent.com/jinht/JhtShopCarAnimation/master/ReadMEImages/8.png" width="50%" height="30%" /> <br>
 
 ### 2.使用起来比较方便，只需导入 JhtAnimationTools.h 头文件即可。  <br>
 (1) 购物车动画 <br>
@@ -30,7 +30,7 @@
      */
      - (void)aniStartShopCarAnimationWithStartRect:(CGRect)rect withImageView:(UIImageView *)imageView withView:(UIView *)view withEndPoint:(CGPoint)lastPoint withControlPoint:(CGPoint)controlPoint withStartToEndSpacePercentage:(NSInteger)per withExpandAnimationTime:(CFTimeInterval)expandAnimationTime withNarrowAnimationTime:(CFTimeInterval)narrowAnimationTime withAnimationValue:(CGFloat)animationValue;
 ```
- (2) 阻尼动画 <br>
+(2) 阻尼动画 <br>
 * 创建阻尼动画的View<br>
 ```oc
     /** 获得的阻尼动画的View
@@ -39,6 +39,14 @@
       * isBlack：yes 需要出现黑色背景， no不需要
       * bgColor：背景颜色
     */
-     - (UIView *)aniDampingAnimationWithFView:(UIView *)view withFrame:(CGRect)frame withBackgroundColor:(UIColor *)bgColor isNeedBlackView:(BOOL)isBlack
+     - (UIView *)aniDampingAnimationWithFView:(UIView *)view withFrame:(CGRect)frame withBackgroundColor:(UIColor *)bgColor isNeedBlackView:(BOOL)isBlack;
 ```
-    
+(3) 动画的代理方法<br>
+```oc
+    /** 开始动画阻尼动画 */
+    - (void)aniStartDampingAnimation;
+    /** 关闭阻尼动画 */
+    - (void)aniCloseDampingAnimation;
+    /** 获得阻尼动画的黑色背景 */
+    - (UIView *)aniGetDampingBlackView;
+```
