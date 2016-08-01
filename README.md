@@ -31,7 +31,7 @@
      - (void)aniStartShopCarAnimationWithStartRect:(CGRect)rect withImageView:(UIImageView *)imageView withView:(UIView *)view withEndPoint:(CGPoint)lastPoint withControlPoint:(CGPoint)controlPoint withStartToEndSpacePercentage:(NSInteger)per withExpandAnimationTime:(CFTimeInterval)expandAnimationTime withNarrowAnimationTime:(CFTimeInterval)narrowAnimationTime withAnimationValue:(CGFloat)animationValue;
 ```
  (2) 阻尼动画 <br>
-创建阻尼动画的View<br>
+* 创建阻尼动画的View<br>
 ```oc
     /** 获得的阻尼动画的View
       * view：黑色背景View的父view(例如:self.view);
