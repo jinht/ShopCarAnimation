@@ -42,6 +42,16 @@
     */
      - (UIView *)aniDampingAnimationWithFView:(UIView *)view withFrame:(CGRect)frame withBackgroundColor:(UIColor *)bgColor isNeedBlackView:(BOOL)isBlack;
 ```
+* 阻尼动画相关使用方法<br>
+```oc
+/** 开始动画阻尼动画 */
+- (void)aniStartDampingAnimation;
+/** 关闭阻尼动画 */
+- (void)aniCloseDampingAnimation;
+/** 获得阻尼动画的黑色背景 */
+- (UIView *)aniGetDampingBlackView;
+```
+
 (3) 动画的代理方法<br>
 ```oc
    /**
