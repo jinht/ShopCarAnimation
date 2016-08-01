@@ -44,12 +44,12 @@
 ```
 (3) 动画的代理方法<br>
 ```oc
-    /** 开始动画阻尼动画 */
-    - (void)aniStartDampingAnimation;
-    /** 关闭阻尼动画 */
-    - (void)aniCloseDampingAnimation;
-    /** 获得阻尼动画的黑色背景 */
-    - (UIView *)aniGetDampingBlackView;
+   /**
+     * type == 0 购物车的动画
+     * type == 1 阻尼动画
+     * isStop: Yes动画结束， No动画过程中
+   */
+   - (void)JhtAnimationWithType:(NSInteger)type isDidStop:(BOOL)isStop;
 ```
 
 ## Hope
