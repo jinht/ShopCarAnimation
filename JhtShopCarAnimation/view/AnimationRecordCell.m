@@ -10,7 +10,6 @@
 
 @implementation AnimationRecordCell
 
-
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -29,12 +28,12 @@
         
         CGFloat frameW = [UIScreen mainScreen].bounds.size.width;
         //删除图标
-        self.wrongImageView = [[UIImageView alloc] initWithFrame:CGRectMake(frameW-13-22, 9, 22, 22)];
+        self.wrongImageView = [[UIImageView alloc] initWithFrame:CGRectMake(frameW - 13 - 22, 9, 22, 22)];
         [self.wrongImageView setImage:[UIImage imageNamed:@"项目删除"]];
         [self.contentView addSubview:self.wrongImageView];
         
         //扣在删除图标的btn
-        self.wrongBtn = [[UIButton alloc] initWithFrame:CGRectMake(frameW-50, 0, 50, 40)];
+        self.wrongBtn = [[UIButton alloc] initWithFrame:CGRectMake(frameW - 50, 0, 50, 40)];
         [self.contentView addSubview:self.wrongBtn];
         
         //底部的分割线
@@ -44,13 +43,6 @@
     }
     return self;
 }
-
-
-
-
-
-
-
 
 
 

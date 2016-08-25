@@ -11,7 +11,7 @@
 #import "AnimationRecordCell.h"
 #import "JhtAnimationTools.h"
 
-@interface AnimationViewController ()<UITableViewDataSource, UITableViewDelegate, JhtAnimationToolsDelegate> {
+@interface AnimationViewController () <UITableViewDataSource, UITableViewDelegate, JhtAnimationToolsDelegate> {
     // 数据源
     NSMutableArray *_sourceArray;
 
@@ -27,9 +27,9 @@
     UIView *_downView;
 }
 
-// tableView的底部
+/** tableView的底部 */
 @property (nonatomic, strong) UIScrollView *tableFooterViewSC;
-// 动画工具类；
+/** 动画工具类 */
 @property (nonatomic, strong) JhtAnimationTools *animationTools;
 
 @end
@@ -119,7 +119,7 @@
     _tableFooterViewDataArray = [[NSMutableArray alloc] init];
     
     NSArray *titleArray = @[@"滑板", @"击剑", @"课间操", @"篮球", @"爬山", @"跑步", @"乒乓球", @"散步", @"跆拳道", @"踢毽子", @"跳绳", @"跳舞", @"网球", @"游泳", @"体操", @"自行车", @"足球"];
-    for (NSInteger i = 0; i < titleArray.count; i++) {
+    for (NSInteger i = 0; i < titleArray.count; i ++) {
         // 获取bundle中的动画图片
         NSString *loadImageDic = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"JhtShopCarAnimationImages.bundle"];
         NSString *loadImagePath = [loadImageDic stringByAppendingPathComponent:[NSString stringWithFormat:@"%ld", i]];
@@ -127,7 +127,6 @@
         model.record_icon = loadImagePath;
         model.record_name = titleArray[i];
         [_tableFooterViewDataArray addObject:model];
-        
     }
 }
 
@@ -154,10 +153,9 @@
 #pragma mark get tableFooterViewSC
 /** get tableFooterViewSC */
 - (UIView *)tableFooterViewSC {
-    CGFloat space  = ((FrameW-45-60/2*5)/4);
+    CGFloat space  = ((FrameW - 45 - 60/2*5)/4);
     CGFloat height = 0;
     if (!_tableFooterViewSC) {
-        
         if (_sourceArray.count != 0) {
             height = FrameH - 64 - _sourceArray.count*40;
         } else {
@@ -169,7 +167,7 @@
         _tableFooterViewSC.showsHorizontalScrollIndicator = NO;
         
         // 生成一堆小的项目图标&文字
-        for (NSInteger i = 0; i< _tableFooterViewDataArray.count; i ++) {
+        for (NSInteger i = 0; i < _tableFooterViewDataArray.count; i ++) {
             AnimationRecordModel *model = [_tableFooterViewDataArray objectAtIndex:i];
             // 小图标和小图标下边label的背景
             UIView *smallView = [[UIView alloc] initWithFrame:CGRectMake(45/2 + i%5*(30 + space), 15 + i/5*(95/2 + 17), (30 + space), 95/2)];
@@ -194,7 +192,7 @@
             
             // 扣在小图标和小图标下边label的背景 上的btn
             UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, imageView.frame.size.width, 95/2)];
-            btn.tag = 400+i;
+            btn.tag = 400 + i;
             [btn addTarget:self action:@selector(aniFootViewBtnClick:) forControlEvents:UIControlEventTouchUpInside];
             [smallView addSubview:btn];
             
@@ -202,7 +200,6 @@
             _tableFooterViewSC.frame = CGRectMake(0, 0, FrameW, height);
             _tableFooterViewSC.contentSize = CGSizeMake(FrameW, 15 + (_tableFooterViewDataArray.count - 1)/5*(95/2 + 34/2) + 95/2);
         }
-
     }
     return _tableFooterViewSC;
 }
