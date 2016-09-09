@@ -10,9 +10,9 @@
 //
 
 #import "AnimationViewController.h"
-#import "AnimationRecordModel.h"
-#import "AnimationRecordCell.h"
 #import "JhtAnimationTools.h"
+#import "AnimationRecordCell.h"
+#import "AnimationRecordModel.h"
 
 @interface AnimationViewController () <UITableViewDataSource, UITableViewDelegate, JhtAnimationToolsDelegate> {
     // 数据源
