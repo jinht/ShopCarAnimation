@@ -317,7 +317,7 @@
     [self.view bringSubviewToFront:_downView];
     
     // 如果你后续想往 这个downView上添加东西，都可以写在外面了，因为downView已经暴露出来了
-    UILabel *showLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (CGRectGetHeight(_downView.frame) - CGRectGetHeight(_downView.frame) / 2) / 2 + 50, CGRectGetWidth(_downView.frame), CGRectGetHeight(_downView.frame) / 2)];
+    UILabel *showLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (CGRectGetHeight(_downView.frame) - CGRectGetHeight(_downView.frame)/2)/2 + 50, CGRectGetWidth(_downView.frame), CGRectGetHeight(_downView.frame)/2)];
     showLabel.text = @"Wow,这你都试出来啦!" ;
     showLabel.font = [UIFont boldSystemFontOfSize:18];
     showLabel.textColor = [UIColor whiteColor];
