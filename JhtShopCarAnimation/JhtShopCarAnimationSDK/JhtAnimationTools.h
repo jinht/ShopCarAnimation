@@ -13,7 +13,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol JhtAnimationToolsDelegate <NSObject>
-/**
+/** 代理
  *  type == 0 购物车的动画
  *  type == 1 阻尼动画
  *  isStop：Yes动画结束，No动画过程中
@@ -58,7 +58,7 @@
 
 #pragma mark - 阻尼动画
 /** 获得的阻尼动画的View
- *  view：黑色背景View的父view(例如：self.view)
+ *  view：黑色背景View的父view（例如：self.view）
  *  frame：是这个阻尼View的坐标
  *  isBlack：yes 需要出现黑色背景，no不需要
  *  bgColor：背景颜色
