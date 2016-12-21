@@ -23,7 +23,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 /** 图片后边的文字 */
 @property (nonatomic,strong) UILabel *titleLabel;
 
-
 /** 删除ImageView */
 @property (nonatomic,strong) UIImageView *wrongImageView;
 

@@ -13,7 +13,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol JhtAnimationToolsDelegate <NSObject>
-/** 代理
+/** 代理函数
  *  type == 0 购物车的动画
  *  type == 1 阻尼动画
  *  isStop：Yes动画结束，No动画过程中
@@ -43,14 +43,14 @@
  *  view：在哪个view上显示 （一般传self.view）
  *  lastPoint：动画结束的坐标点
  *  controlPoint：动画过程中抛物线的中间转折点
- *  per：决定控制点，起点和终点X坐标之间距离 1/per； 注：如果per <= 0，则控制点由controlPoint决定,否则控制点由per决定
+ *  per：决定控制点，起点和终点X坐标之间距离 1/per；注：如果per <= 0，则控制点由controlPoint决定，否则控制点由per决定
  *  expandAnimationTime：动画变大的时间
  *  narrowAnimationTime：动画变小的时间
  *  animationValue：动画变大过程中，变为原来的几倍大
  *  注意：如果动画过程中，你不想让图片变大变小，保持原来的大小运动，传值如下：
-         expandAnimationTime：0.0f
-         narrowAnimationTime：动画总共的时间
-         animationValue：1.0f
+ *       expandAnimationTime：0.0f
+ *       narrowAnimationTime：动画总共的时间
+ *       animationValue：1.0f
  */
 - (void)aniStartShopCarAnimationWithStartRect:(CGRect)rect withImageView:(UIImageView *)imageView withView:(UIView *)view withEndPoint:(CGPoint)lastPoint withControlPoint:(CGPoint)controlPoint withStartToEndSpacePercentage:(NSInteger)per withExpandAnimationTime:(CFTimeInterval)expandAnimationTime withNarrowAnimationTime:(CFTimeInterval)narrowAnimationTime withAnimationValue:(CGFloat)animationValue;
 
