@@ -3,8 +3,9 @@
 ## Contents
 #### 购物车抛物线动画 <br>
 #### 阻尼动画 <br>
-## needed to pay attention.
 
+
+## needed to pay attention.
 ### 1.这是一个轻量级的动画文件，可以实现购物车的上抛 && 下抛动画；此外我还写了一个简单的阻尼动画，供大家交流使用！<br>
 <img src="https://raw.githubusercontent.com/jinht/JhtShopCarAnimationDemo/master/ReadMEImages/1.gif"  width=250 height=445 /> <br>
  
@@ -59,7 +60,7 @@
  - (void)JhtAnimationWithType:(NSInteger)type isDidStop:(BOOL)isStop;
 ```
 
-###Remind
+### Remind
 * ARC
 * iOS >= 7.0
 * iPhone \ iPad 
