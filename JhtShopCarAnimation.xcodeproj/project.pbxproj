@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		78E75C0C1D49F8AA0065EBA8 /* AnimationRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E75C0B1D49F8AA0065EBA8 /* AnimationRecordModel.m */; };
-		78E75C0F1D49F9880065EBA8 /* AnimationRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E75C0E1D49F9880065EBA8 /* AnimationRecordCell.m */; };
+		A5227E201E8CF5350072AF69 /* AnimationRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5227E191E8CF5350072AF69 /* AnimationRecordCell.m */; };
+		A5227E211E8CF5350072AF69 /* AnimationRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5227E1C1E8CF5350072AF69 /* AnimationRecordModel.m */; };
+		A5227E221E8CF5350072AF69 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5227E1F1E8CF5350072AF69 /* AnimationViewController.m */; };
 		A54304F31D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A54304F21D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK.a */; };
 		A5EA2EF11D49EBAA007217DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2EF01D49EBAA007217DE /* main.m */; };
 		A5EA2EF41D49EBAA007217DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2EF31D49EBAA007217DE /* AppDelegate.m */; };
@@ -17,7 +18,6 @@
 		A5EA2EFF1D49EBAA007217DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EA2EFD1D49EBAA007217DE /* LaunchScreen.storyboard */; };
 		A5EA2F0A1D49EBAA007217DE /* JhtShopCarAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2F091D49EBAA007217DE /* JhtShopCarAnimationTests.m */; };
 		A5EA2F151D49EBAA007217DE /* JhtShopCarAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2F141D49EBAA007217DE /* JhtShopCarAnimationUITests.m */; };
-		A5EA2F2B1D49F57F007217DE /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2F2A1D49F57F007217DE /* AnimationViewController.m */; };
 		A5EA2F2E1D49F5B1007217DE /* JhtShopCarAnimationImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5EA2F2D1D49F5B1007217DE /* JhtShopCarAnimationImages.bundle */; };
 /* End PBXBuildFile section */
 
@@ -39,10 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		78E75C0A1D49F8AA0065EBA8 /* AnimationRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationRecordModel.h; sourceTree = "<group>"; };
-		78E75C0B1D49F8AA0065EBA8 /* AnimationRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationRecordModel.m; sourceTree = "<group>"; };
-		78E75C0D1D49F9880065EBA8 /* AnimationRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationRecordCell.h; sourceTree = "<group>"; };
-		78E75C0E1D49F9880065EBA8 /* AnimationRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationRecordCell.m; sourceTree = "<group>"; };
+		A5227E181E8CF5350072AF69 /* AnimationRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationRecordCell.h; sourceTree = "<group>"; };
+		A5227E191E8CF5350072AF69 /* AnimationRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationRecordCell.m; sourceTree = "<group>"; };
+		A5227E1B1E8CF5350072AF69 /* AnimationRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationRecordModel.h; sourceTree = "<group>"; };
+		A5227E1C1E8CF5350072AF69 /* AnimationRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationRecordModel.m; sourceTree = "<group>"; };
+		A5227E1E1E8CF5350072AF69 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		A5227E1F1E8CF5350072AF69 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
 		A54304F11D4B4B0A00D7FB7E /* JhtAnimationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhtAnimationTools.h; sourceTree = "<group>"; };
 		A54304F21D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JhtShopCarAnimationSDK.a; sourceTree = "<group>"; };
 		A5EA2EEC1D49EBAA007217DE /* JhtShopCarAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JhtShopCarAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,8 +61,6 @@
 		A5EA2F101D49EBAA007217DE /* JhtShopCarAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhtShopCarAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5EA2F141D49EBAA007217DE /* JhtShopCarAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhtShopCarAnimationUITests.m; sourceTree = "<group>"; };
 		A5EA2F161D49EBAA007217DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5EA2F291D49F57F007217DE /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
-		A5EA2F2A1D49F57F007217DE /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
 		A5EA2F2D1D49F5B1007217DE /* JhtShopCarAnimationImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JhtShopCarAnimationImages.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,22 +90,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		78E75C081D49F8630065EBA8 /* model */ = {
+		A5227E171E8CF5350072AF69 /* AnimationRecordCell */ = {
 			isa = PBXGroup;
 			children = (
-				78E75C0A1D49F8AA0065EBA8 /* AnimationRecordModel.h */,
-				78E75C0B1D49F8AA0065EBA8 /* AnimationRecordModel.m */,
+				A5227E181E8CF5350072AF69 /* AnimationRecordCell.h */,
+				A5227E191E8CF5350072AF69 /* AnimationRecordCell.m */,
 			);
-			path = model;
+			path = AnimationRecordCell;
 			sourceTree = "<group>";
 		};
-		78E75C091D49F8680065EBA8 /* view */ = {
+		A5227E1A1E8CF5350072AF69 /* AnimationRecordModel */ = {
 			isa = PBXGroup;
 			children = (
-				78E75C0D1D49F9880065EBA8 /* AnimationRecordCell.h */,
-				78E75C0E1D49F9880065EBA8 /* AnimationRecordCell.m */,
+				A5227E1B1E8CF5350072AF69 /* AnimationRecordModel.h */,
+				A5227E1C1E8CF5350072AF69 /* AnimationRecordModel.m */,
 			);
-			path = view;
+			path = AnimationRecordModel;
+			sourceTree = "<group>";
+		};
+		A5227E1D1E8CF5350072AF69 /* AnimationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A5227E1E1E8CF5350072AF69 /* AnimationViewController.h */,
+				A5227E1F1E8CF5350072AF69 /* AnimationViewController.m */,
+			);
+			path = AnimationViewController;
 			sourceTree = "<group>";
 		};
 		A54304F01D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK */ = {
@@ -142,9 +151,9 @@
 			children = (
 				A5EA2EF21D49EBAA007217DE /* AppDelegate.h */,
 				A5EA2EF31D49EBAA007217DE /* AppDelegate.m */,
-				A5EA2F281D49F57F007217DE /* Controller */,
-				78E75C081D49F8630065EBA8 /* model */,
-				78E75C091D49F8680065EBA8 /* view */,
+				A5227E1D1E8CF5350072AF69 /* AnimationViewController */,
+				A5227E171E8CF5350072AF69 /* AnimationRecordCell */,
+				A5227E1A1E8CF5350072AF69 /* AnimationRecordModel */,
 				A54304F01D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK */,
 				A5EA2F2C1D49F5B1007217DE /* JhtTemp */,
 				A5EA2EF81D49EBAA007217DE /* Main.storyboard */,
@@ -180,15 +189,6 @@
 				A5EA2F161D49EBAA007217DE /* Info.plist */,
 			);
 			path = JhtShopCarAnimationUITests;
-			sourceTree = "<group>";
-		};
-		A5EA2F281D49F57F007217DE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				A5EA2F291D49F57F007217DE /* AnimationViewController.h */,
-				A5EA2F2A1D49F57F007217DE /* AnimationViewController.m */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		A5EA2F2C1D49F5B1007217DE /* JhtTemp */ = {
@@ -331,11 +331,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5227E201E8CF5350072AF69 /* AnimationRecordCell.m in Sources */,
+				A5227E211E8CF5350072AF69 /* AnimationRecordModel.m in Sources */,
+				A5227E221E8CF5350072AF69 /* AnimationViewController.m in Sources */,
 				A5EA2EF41D49EBAA007217DE /* AppDelegate.m in Sources */,
 				A5EA2EF11D49EBAA007217DE /* main.m in Sources */,
-				A5EA2F2B1D49F57F007217DE /* AnimationViewController.m in Sources */,
-				78E75C0C1D49F8AA0065EBA8 /* AnimationRecordModel.m in Sources */,
-				78E75C0F1D49F9880065EBA8 /* AnimationRecordCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

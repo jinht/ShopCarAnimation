@@ -19,17 +19,17 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 /** 编辑运动记录页 编辑记录的cell */
 @interface AnimationRecordCell : UITableViewCell
 /** 前边的图片 */
-@property (nonatomic,strong) UIImageView *headerImageView;
+@property (nonatomic, strong) UIImageView *headerImageView;
 /** 图片后边的文字 */
-@property (nonatomic,strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *titleLabel;
 
 /** 删除ImageView */
-@property (nonatomic,strong) UIImageView *wrongImageView;
+@property (nonatomic, strong) UIImageView *wrongImageView;
 
 /** 删除btn */
-@property (nonatomic,strong) UIButton *wrongBtn;
+@property (nonatomic, strong) UIButton *wrongBtn;
 /** 底部的分割线 */
-@property (nonatomic,strong) UILabel *lineLabel;
+@property (nonatomic, strong) UILabel *lineLabel;
 
  
 @end

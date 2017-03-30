@@ -14,7 +14,7 @@
 #import "AnimationRecordCell.h"
 #import "AnimationRecordModel.h"
 
-@interface AnimationViewController () <UITableViewDataSource, UITableViewDelegate, JhtAnimationToolsDelegate> {
+@interface AnimationViewController ()<UITableViewDataSource, UITableViewDelegate, JhtAnimationToolsDelegate> {
     // 数据源
     NSMutableArray *_sourceArray;
 
@@ -26,7 +26,7 @@
     // footerView中被选中的model
     AnimationRecordModel *_selectedModel;
     
-    // 阻尼动画的主要View;
+    // 阻尼动画的主要View
     UIView *_downView;
 }
 
@@ -112,7 +112,7 @@
 
 
 
-#pragma mark - 初始化相关控件和参数
+#pragma mark - init param
 /** 初始化相关控件和参数 */
 - (void)animationInit {
     // 数据源数组
@@ -130,12 +130,13 @@
         model.record_icon = loadImagePath;
         model.record_name = titleArray[i];
         [_tableFooterViewDataArray addObject:model];
+        
     }
 }
 
 
 
-#pragma mark - 创建UI界面
+#pragma mark - UI
 /** 创建UI界面 */
 - (void)aniCreateUI {
     // tableView
@@ -147,20 +148,21 @@
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // 设置tableView不可滚动
     _tableView.scrollEnabled = NO;
-    _tableView.contentSize = CGSizeMake(FrameW, _tableFooterViewDataArray.count*40);
+    _tableView.contentSize = CGSizeMake(FrameW, _tableFooterViewDataArray.count * 40);
     [self.view addSubview:_tableView];
     
     _tableView.tableFooterView = self.tableFooterViewSC;
 }
 
-#pragma mark get tableFooterViewSC
+
+#pragma mark Get tableFooterViewSC
 /** get tableFooterViewSC */
 - (UIView *)tableFooterViewSC {
-    CGFloat space  = ((FrameW - 45 - 60/2*5)/4);
+    CGFloat space  = ((FrameW - 45 - 60 / 2 * 5) / 4);
     CGFloat height = 0;
     if (!_tableFooterViewSC) {
         if (_sourceArray.count != 0) {
-            height = FrameH - 64 - _sourceArray.count*40;
+            height = FrameH - 64 - _sourceArray.count * 40;
         } else {
             height = FrameH - 64 - 40;
         }
@@ -170,11 +172,11 @@
         _tableFooterViewSC.showsHorizontalScrollIndicator = NO;
         
         // 生成一堆小的项目图标&文字
-        for (NSInteger i = 0; i < _tableFooterViewDataArray.count; i ++) {
+        for (NSInteger i = 0; i< _tableFooterViewDataArray.count; i ++) {
             AnimationRecordModel *model = [_tableFooterViewDataArray objectAtIndex:i];
             // 小图标和小图标下边label的背景
-            UIView *smallView = [[UIView alloc] initWithFrame:CGRectMake(45/2 + i%5*(30 + space), 15 + i/5*(95/2 + 17), (30 + space), 95/2)];
-            smallView.tag = 100+i;
+            UIView *smallView = [[UIView alloc] initWithFrame:CGRectMake(45 / 2 + i % 5 * (30 + space), 15 + i / 5 * (95 / 2 + 17), (30 + space), 95 / 2)];
+            smallView.tag = 100 + i;
             
             // 小图标
             UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
@@ -184,7 +186,7 @@
             [smallView addSubview:imageView];
             
             // 小图标下边的文字
-            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(-12, 68/2, imageView.frame.size.width + 24, (95 - 68)/2)];
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(-12, 68 / 2, CGRectGetWidth(imageView.frame) + 24, (95 - 68) / 2)];
             label.text = model.record_name;
             label.font = [UIFont systemFontOfSize:12];
             label.textColor = UIColorFromRGB(0x666666);
@@ -201,11 +203,12 @@
             
             [_tableFooterViewSC addSubview:smallView];
             _tableFooterViewSC.frame = CGRectMake(0, 0, FrameW, height);
-            _tableFooterViewSC.contentSize = CGSizeMake(FrameW, 15 + (_tableFooterViewDataArray.count - 1)/5*(95/2 + 34/2) + 95/2);
+            _tableFooterViewSC.contentSize = CGSizeMake(FrameW, 15 + (_tableFooterViewDataArray.count - 1) / 5 * (95 / 2 + 34 / 2) + 95 / 2);
         }
     }
     return _tableFooterViewSC;
 }
+
 
 #pragma mark 点击footerView中小图标触发事件
 /** 点击footerView中小图标触发事件 */
@@ -221,7 +224,6 @@
     NSInteger index = btn.tag - 400;
     UIView *smallView = btn.superview;
     
-    NSLog(@"%@", _sourceArray);
     // model转换
     AnimationRecordModel *model = [_tableFooterViewDataArray objectAtIndex:index];
     _selectedModel = [[AnimationRecordModel alloc] init];
@@ -240,13 +242,12 @@
     if (isContain) {
         // 收起键盘
         [self.view endEditing:YES];
-        NSLog(@"您已选择此项目！");
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"您已选择此项目！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alertView show];
         return;
     }
     
-    UIImageView *imageView = (UIImageView *)[smallView viewWithTag:200+index];
+    UIImageView *imageView = (UIImageView *)[smallView viewWithTag:200 + index];
     CGRect frame = [imageView.superview convertRect:imageView.frame toView:self.view];
     
     // 关闭self.view交互，防止重复添加
@@ -255,11 +256,12 @@
     [self anistartShopCarAnimationWithRect:frame ImageView:imageView];
 }
 
+
 #pragma mark 购物车动画
 /** 购物车动画 */
 - (void)anistartShopCarAnimationWithRect:(CGRect)rect ImageView:(UIImageView *)imageView {
     // 动画结束点
-    CGPoint lastPoint = CGPointMake(10 + 30/2, 5 + 30/2);
+    CGPoint lastPoint = CGPointMake(10 + 30 / 2, 5 + 30 / 2);
     /**************************用默认的时候这些都不用写********************************************/
      
      // 我找个中间控制点，但是我想判断是从上向下抛物线 还是 从下向上抛物线
@@ -268,7 +270,7 @@
      NSInteger lastPointToStartPoint = a > 0 ? a : -a;
      // 取.x最小的
      NSInteger b = lastPoint.x < imageView.frame.origin.x ? lastPoint.x : imageView.frame.origin.x;
-     // 控制点：
+     // 控制点
      CGPoint controlPoint = CGPointMake(b + lastPointToStartPoint / 3, 0);
     
     /**************************用默认的时候这些都不用写********************************************/
@@ -293,10 +295,10 @@
     // 动画过程中，大小不变 的例子
 //    [self.animationTools aniStartShopCarAnimationWithStartRect:rect withImageView:imageView withView:self.view withEndPoint:lastPoint withControlPoint:CGPointZero withStartToEndSpacePercentage:4 withExpandAnimationTime:0.0f  withNarrowAnimationTime:0.8f withAnimationValue:1.0f];
     // 用默认控制点 的例子
-    [self.animationTools aniStartShopCarAnimationWithStartRect:rect withImageView:imageView withView:self.view withEndPoint:lastPoint withControlPoint:CGPointZero withStartToEndSpacePercentage:4 withExpandAnimationTime:0.5f  withNarrowAnimationTime:0.5f withAnimationValue:2.0f];
+    [self.animationTools aniStartShopCarAnimationWithStartRect:rect withImageView:imageView withView:self.view withEndPoint:lastPoint withControlPoint:CGPointZero withStartToEndSpacePercentage:4 withExpandAnimationTime:0.5f withNarrowAnimationTime:0.5f withAnimationValue:2.0f];
 }
 
-#pragma mark get animationTools
+#pragma mark Get animationTools
 /** get animationTools */
 - (JhtAnimationTools *)animationTools {
     if (!_animationTools) {
@@ -315,10 +317,12 @@
     _downView = [self.animationTools aniDampingAnimationWithFView:self.view withFrame:CGRectMake(0, -250, FrameW, 250) withBackgroundColor:UIColorFromRGB(0xfd4444) isNeedBlackView:YES];
     [self.navigationController.view addSubview:_downView];
     [self.view bringSubviewToFront:_downView];
+    UIView *vv = [self.view viewWithTag:ATBlackViewTag];
+//    NSLog(@"%lf~~~~~%lf", vv.frame.size.width, vv.frame.origin.y);
     
     // 如果你后续想往 这个downView上添加东西，都可以写在外面了，因为downView已经暴露出来了
-    UILabel *showLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (CGRectGetHeight(_downView.frame) - CGRectGetHeight(_downView.frame)/2)/2 + 50, CGRectGetWidth(_downView.frame), CGRectGetHeight(_downView.frame)/2)];
-    showLabel.text = @"Wow,这你都试出来啦!" ;
+    UILabel *showLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (CGRectGetHeight(_downView.frame) - CGRectGetHeight(_downView.frame) / 2) / 2 + 50, CGRectGetWidth(_downView.frame), CGRectGetHeight(_downView.frame) / 2)];
+    showLabel.text = @"Wow，这你都试出来啦!" ;
     showLabel.font = [UIFont boldSystemFontOfSize:18];
     showLabel.textColor = [UIColor whiteColor];
     showLabel.numberOfLines = 0;
@@ -351,17 +355,14 @@
             cell = [[AnimationRecordCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
         }
         
-        if (indexPath.row == 0) {
-            NSLog(@"%f , %f",cell.headerImageView.center.x,cell.headerImageView.center.y);
-        }
         AnimationRecordModel *model = [_sourceArray objectAtIndex:indexPath.row];
         cell.headerImageView.image = [UIImage imageWithContentsOfFile:model.record_icon];
         cell.titleLabel.text = model.record_name;
         // 设置最下边那个cell底部线的坐标
         if (indexPath.row != _sourceArray.count - 1) {
-            cell.lineLabel.frame = CGRectMake(100/2, 40 - 0.6,FrameW - 100/2, 0.6);
+            cell.lineLabel.frame = CGRectMake(100 / 2, 40 - 0.6, FrameW - 100 / 2, 0.6);
         } else {
-            cell.lineLabel.frame = CGRectMake(0, 40 - 0.6,FrameW, 0.6);
+            cell.lineLabel.frame = CGRectMake(0, 40 - 0.6, FrameW, 0.6);
         }
         
         // 尾部的删除按钮
@@ -374,7 +375,7 @@
         if (!cell) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kong"];
             // 底部的分割线
-            UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 40-0.6,FrameW, 0.6)];
+            UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 40 - 0.6, FrameW, 0.6)];
             lineLabel.backgroundColor = UIColorFromRGB(0xCCCCCC);
             [cell.contentView addSubview:lineLabel];
         }
@@ -402,13 +403,28 @@
     [self animationUpdateSCFrame];
 }
 
+#pragma mark 更新sc坐标
+/** 更新sc坐标 */
+- (void)animationUpdateSCFrame {
+    // 首先重置
+    _tableFooterViewSC.contentOffset = CGPointZero;
+    CGFloat height = 0;
+    if (_sourceArray.count != 0) {
+        height = FrameH - 64 - _sourceArray.count*40;
+    } else {
+        height = FrameH - 64 - 40;
+    }
+    _tableFooterViewSC.frame = CGRectMake(0, 0, FrameW, height);
+    _tableView.tableFooterView = _tableFooterViewSC;
+}
+
 
 
 #pragma mark - JhtAnimationToolsDelegate
-/**
- * type == 0 购物车的动画
- * type == 1 阻尼动画
- * isStop: Yes动画结束， No动画过程中
+/** 代理
+ *  type == 0 购物车的动画
+ *  type == 1 阻尼动画
+ *  isStop：Yes动画结束，No动画过程中
  */
 - (void)JhtAnimationWithType:(NSInteger)type isDidStop:(BOOL)isStop {
     // 动画结束的代理
@@ -433,22 +449,6 @@
             _downView.frame = CGRectMake(0, -100, FrameW, 250);
         }
     }
-}
-
-
-#pragma mark -  更新sc坐标
-/** 更新sc坐标 */
-- (void)animationUpdateSCFrame {
-    // 首先重置
-    _tableFooterViewSC.contentOffset = CGPointZero;
-    CGFloat height = 0;
-    if (_sourceArray.count != 0) {
-        height = FrameH - 64 - _sourceArray.count*40;
-    } else {
-        height = FrameH - 64 - 40;
-    }
-    _tableFooterViewSC.frame = CGRectMake(0, 0, FrameW, height);
-    _tableView.tableFooterView = _tableFooterViewSC;
 }
 
 

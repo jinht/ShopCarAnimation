@@ -12,11 +12,12 @@
 #import <Foundation/Foundation.h>
 
 @interface AnimationRecordModel : NSObject
-
+#pragma mark - property
+#pragma mark required
 /** 图标路径 */
-@property(nonatomic,copy) NSString *record_icon;
+@property (nonatomic, strong) NSString *record_icon;
 /** 解释文字 */
-@property(nonatomic,copy) NSString *record_name;
+@property (nonatomic, strong) NSString *record_name;
 
 
 @end

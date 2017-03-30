@@ -24,23 +24,29 @@
 
 
 /** 黑色背景的tag值 */
-#define BlackViewTag 222
+extern NSInteger const ATBlackViewTag;
+
+
 /** 动画类 */
 @interface JhtAnimationTools : NSObject
+#pragma mark - property
 /** 动画层 */
 @property (strong, nonatomic) CALayer *shopLayer;
 /** 代理 */
 @property (assign, nonatomic) id<JhtAnimationToolsDelegate> toolsDelegate;
 
+
+
+#pragma mark - Public Method
 /** 单例获取自身对象 */
 + (instancetype)sharedInstance;
 
 
-#pragma mark - 购物车上抛动画
+#pragma mark 购物车上抛动画
 /** 购物车上抛动画
  *  rect：动画开始的坐标；如果rect传CGRectZero，则用默认开始坐标
  *  imageView：动画对应的imageView
- *  view：在哪个view上显示 （一般传self.view）
+ *  view：在哪个view上显示（一般传self.view）
  *  lastPoint：动画结束的坐标点
  *  controlPoint：动画过程中抛物线的中间转折点
  *  per：决定控制点，起点和终点X坐标之间距离 1/per；注：如果per <= 0，则控制点由controlPoint决定，否则控制点由per决定
@@ -55,8 +61,7 @@
 - (void)aniStartShopCarAnimationWithStartRect:(CGRect)rect withImageView:(UIImageView *)imageView withView:(UIView *)view withEndPoint:(CGPoint)lastPoint withControlPoint:(CGPoint)controlPoint withStartToEndSpacePercentage:(NSInteger)per withExpandAnimationTime:(CFTimeInterval)expandAnimationTime withNarrowAnimationTime:(CFTimeInterval)narrowAnimationTime withAnimationValue:(CGFloat)animationValue;
 
 
-
-#pragma mark - 阻尼动画
+#pragma mark 阻尼动画
 /** 获得的阻尼动画的View
  *  view：黑色背景View的父view（例如：self.view）
  *  frame：是这个阻尼View的坐标
