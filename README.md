@@ -3,7 +3,7 @@
 ### Function Description
 * 购物车抛物线动画（上抛 && 下抛）
 * 阻尼动画 <br>
-<img src="https://raw.githubusercontent.com/jinht/JhtShopCarAnimationDemo/master/ReadMEImages/1.gif" width=250 height=445 /> <br>
+<img src="https://raw.githubusercontent.com/jinht/JhtShopCarAnimationDemo/master/ReadMEImages/1.gif"  width=250 height=445 /> <br>
  
  
 ### How to use
