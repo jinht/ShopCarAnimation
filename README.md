@@ -1,16 +1,13 @@
-## JhtShopCarAnimation
+## [ShopCarAnimation（购物车类的抛物线动画）](https://github.com/jinht/ShopCarAnimation)
 
-## Contents
-#### 购物车抛物线动画 <br>
-#### 阻尼动画 <br>
-
-
-## needed to pay attention.
-### 1.这是一个轻量级的动画文件，可以实现购物车的上抛 && 下抛动画；此外我还写了一个简单的阻尼动画，供大家交流使用！<br>
+### Function Description
+* 购物车抛物线动画（上抛 && 下抛）
+* 阻尼动画
 <img src="https://raw.githubusercontent.com/jinht/JhtShopCarAnimationDemo/master/ReadMEImages/1.gif"  width=250 height=445 /> <br>
  
-### 2.使用起来比较方便，只需导入 JhtAnimationTools.h 头文件即可。<br>
-(1) 购物车动画 <br>
+ 
+### How to use
+#### 1. 购物车动画
 ```oc
 /**
   * rect: 动画开始的坐标; 如果rect传CGRectZero,则用默认开始坐标;
@@ -29,8 +26,9 @@
 */
  - (void)aniStartShopCarAnimationWithStartRect:(CGRect)rect withImageView:(UIImageView *)imageView withView:(UIView *)view withEndPoint:(CGPoint)lastPoint withControlPoint:(CGPoint)controlPoint withStartToEndSpacePercentage:(NSInteger)per withExpandAnimationTime:(CFTimeInterval)expandAnimationTime withNarrowAnimationTime:(CFTimeInterval)narrowAnimationTime withAnimationValue:(CGFloat)animationValue;
 ```
-(2) 阻尼动画 <br>
-* 创建阻尼动画的View<br>
+
+#### 2. 阻尼动画
+##### a. 创建阻尼动画的View
 ```oc
 /** 获得的阻尼动画的View
   * view：黑色背景View的父view(例如:self.view);
@@ -40,7 +38,7 @@
  */
  - (UIView *)aniDampingAnimationWithFView:(UIView *)view withFrame:(CGRect)frame withBackgroundColor:(UIColor *)bgColor isNeedBlackView:(BOOL)isBlack;
 ```
-* 阻尼动画相关使用方法<br>
+##### b. 阻尼动画相关使用方法
 ```oc
 /** 开始动画阻尼动画 */
 - (void)aniStartDampingAnimation;
@@ -50,7 +48,7 @@
 - (UIView *)aniGetDampingBlackView;
 ```
 
-(3) 动画的代理方法<br>
+#### 3. 动画的代理方法
 ```oc
 /**
   * type == 0 购物车的动画
