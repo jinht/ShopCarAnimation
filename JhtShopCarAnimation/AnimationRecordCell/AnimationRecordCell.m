@@ -6,7 +6,7 @@
 //  CSDN博客: http://blog.csdn.net/anticipate91
 //
 //  Created by Jht on 15/10/9.
-//  Copyright (c) 2015年 靳海涛. All rights reserved.
+//  Copyright © 2016年 JhtShopCarAnimation. All rights reserved.
 //
 
 #import "AnimationRecordCell.h"

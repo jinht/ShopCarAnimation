@@ -6,12 +6,13 @@
 //  CSDN博客: http://blog.csdn.net/anticipate91
 //
 //  Created by Jht on 16/5/17.
-//  Copyright © 2016年 靳海涛. All rights reserved.
+//  Copyright © 2016年 JhtShopCarAnimation. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 @interface AnimationRecordModel : NSObject
+
 #pragma mark - property
 #pragma mark required
 /** 图标路径 */

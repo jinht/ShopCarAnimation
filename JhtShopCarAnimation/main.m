@@ -6,7 +6,7 @@
 //  CSDN博客: http://blog.csdn.net/anticipate91
 //
 //  Created by Jht on 16/7/28.
-//  Copyright © 2016年 Jht. All rights reserved.
+//  Copyright © 2016年 JhtShopCarAnimation. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

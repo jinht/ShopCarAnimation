@@ -6,7 +6,7 @@
 //  CSDN博客: http://blog.csdn.net/anticipate91
 //
 //  Created by Jht on 16/5/17.
-//  Copyright © 2016年 靳海涛. All rights reserved.
+//  Copyright © 2016年 JhtShopCarAnimation. All rights reserved.
 //
 
 #import "AnimationViewController.h"
@@ -130,7 +130,6 @@
         model.record_icon = loadImagePath;
         model.record_name = titleArray[i];
         [_tableFooterViewDataArray addObject:model];
-        
     }
 }
 
@@ -172,7 +171,7 @@
         _tableFooterViewSC.showsHorizontalScrollIndicator = NO;
         
         // 生成一堆小的项目图标&文字
-        for (NSInteger i = 0; i< _tableFooterViewDataArray.count; i ++) {
+        for (NSInteger i = 0; i < _tableFooterViewDataArray.count; i ++) {
             AnimationRecordModel *model = [_tableFooterViewDataArray objectAtIndex:i];
             // 小图标和小图标下边label的背景
             UIView *smallView = [[UIView alloc] initWithFrame:CGRectMake(45 / 2 + i % 5 * (30 + space), 15 + i / 5 * (95 / 2 + 17), (30 + space), 95 / 2)];
@@ -317,6 +316,9 @@
     _downView = [self.animationTools aniDampingAnimationWithFView:self.view withFrame:CGRectMake(0, -250, FrameW, 250) withBackgroundColor:UIColorFromRGB(0xfd4444) isNeedBlackView:YES];
     [self.navigationController.view addSubview:_downView];
     [self.view bringSubviewToFront:_downView];
+    
+    // 黑色背景的tag值
+    extern NSInteger const ATBlackViewTag;
     UIView *vv = [self.view viewWithTag:ATBlackViewTag];
 //    NSLog(@"%lf~~~~~%lf", vv.frame.size.width, vv.frame.origin.y);
     
@@ -421,7 +423,7 @@
 
 
 #pragma mark - JhtAnimationToolsDelegate
-/** 代理
+/** 委托
  *  type == 0 购物车的动画
  *  type == 1 阻尼动画
  *  isStop：Yes动画结束，No动画过程中

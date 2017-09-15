@@ -6,14 +6,14 @@
 //  CSDN博客: http://blog.csdn.net/anticipate91
 //
 //  Created by Jht on 16/5/17.
-//  Copyright © 2016年 靳海涛. All rights reserved.
+//  Copyright © 2016年 JhtAnimationTools. All rights reserved.
 //
 
 
 #import <UIKit/UIKit.h>
 
 @protocol JhtAnimationToolsDelegate <NSObject>
-/** 代理函数
+/** 委托
  *  type == 0 购物车的动画
  *  type == 1 阻尼动画
  *  isStop：Yes动画结束，No动画过程中
@@ -26,9 +26,9 @@
 /** 黑色背景的tag值 */
 extern NSInteger const ATBlackViewTag;
 
-
-/** 动画类 */
+/** 动画工具类 */
 @interface JhtAnimationTools : NSObject
+
 #pragma mark - property
 /** 动画层 */
 @property (strong, nonatomic) CALayer *shopLayer;
@@ -38,7 +38,7 @@ extern NSInteger const ATBlackViewTag;
 
 
 #pragma mark - Public Method
-/** 单例获取自身对象 */
+/** 单例 */
 + (instancetype)sharedInstance;
 
 
@@ -62,10 +62,10 @@ extern NSInteger const ATBlackViewTag;
 
 
 #pragma mark 阻尼动画
-/** 获得的阻尼动画的View
+/** 获取的阻尼动画的View
  *  view：黑色背景View的父view（例如：self.view）
- *  frame：是这个阻尼View的坐标
- *  isBlack：yes 需要出现黑色背景，no不需要
+ *  frame：这个阻尼View的坐标
+ *  isBlack：YES 需要出现黑色背景，NO 不需要出现黑色背景
  *  bgColor：背景颜色
  */
 - (UIView *)aniDampingAnimationWithFView:(UIView *)view withFrame:(CGRect)frame withBackgroundColor:(UIColor *)bgColor isNeedBlackView:(BOOL)isBlack;
@@ -73,7 +73,7 @@ extern NSInteger const ATBlackViewTag;
 - (void)aniStartDampingAnimation;
 /** 关闭阻尼动画 */
 - (void)aniCloseDampingAnimation;
-/** 获得阻尼动画的黑色背景 */
+/** 获取阻尼动画的黑色背景 */
 - (UIView *)aniGetDampingBlackView;
 
 

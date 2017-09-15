@@ -6,7 +6,7 @@
 //  CSDN博客: http://blog.csdn.net/anticipate91
 //
 //  Created by Jht on 16/7/28.
-//  Copyright © 2016年 Jht. All rights reserved.
+//  Copyright © 2016年 Jinht. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -16,8 +16,8 @@
 
 @end
 
-@implementation AppDelegate
 
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[AnimationViewController alloc] init]];

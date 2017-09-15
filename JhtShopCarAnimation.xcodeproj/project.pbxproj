@@ -10,7 +10,7 @@
 		A5227E201E8CF5350072AF69 /* AnimationRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5227E191E8CF5350072AF69 /* AnimationRecordCell.m */; };
 		A5227E211E8CF5350072AF69 /* AnimationRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5227E1C1E8CF5350072AF69 /* AnimationRecordModel.m */; };
 		A5227E221E8CF5350072AF69 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5227E1F1E8CF5350072AF69 /* AnimationViewController.m */; };
-		A54304F31D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A54304F21D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK.a */; };
+		A533D9B61F6BDEBD00A4DC93 /* JhtAnimationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A533D9B51F6BDEBD00A4DC93 /* JhtAnimationTools.m */; };
 		A5EA2EF11D49EBAA007217DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2EF01D49EBAA007217DE /* main.m */; };
 		A5EA2EF41D49EBAA007217DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2EF31D49EBAA007217DE /* AppDelegate.m */; };
 		A5EA2EFA1D49EBAA007217DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EA2EF81D49EBAA007217DE /* Main.storyboard */; };
@@ -45,8 +45,8 @@
 		A5227E1C1E8CF5350072AF69 /* AnimationRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationRecordModel.m; sourceTree = "<group>"; };
 		A5227E1E1E8CF5350072AF69 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
 		A5227E1F1E8CF5350072AF69 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
-		A54304F11D4B4B0A00D7FB7E /* JhtAnimationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhtAnimationTools.h; sourceTree = "<group>"; };
-		A54304F21D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JhtShopCarAnimationSDK.a; sourceTree = "<group>"; };
+		A533D9B41F6BDEBD00A4DC93 /* JhtAnimationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhtAnimationTools.h; sourceTree = "<group>"; };
+		A533D9B51F6BDEBD00A4DC93 /* JhtAnimationTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhtAnimationTools.m; sourceTree = "<group>"; };
 		A5EA2EEC1D49EBAA007217DE /* JhtShopCarAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JhtShopCarAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5EA2EF01D49EBAA007217DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5EA2EF21D49EBAA007217DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A54304F31D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,13 +116,13 @@
 			path = AnimationViewController;
 			sourceTree = "<group>";
 		};
-		A54304F01D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK */ = {
+		A533D9B31F6BDEBD00A4DC93 /* JhtAnimationTools */ = {
 			isa = PBXGroup;
 			children = (
-				A54304F11D4B4B0A00D7FB7E /* JhtAnimationTools.h */,
-				A54304F21D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK.a */,
+				A533D9B41F6BDEBD00A4DC93 /* JhtAnimationTools.h */,
+				A533D9B51F6BDEBD00A4DC93 /* JhtAnimationTools.m */,
 			);
-			path = JhtShopCarAnimationSDK;
+			path = JhtAnimationTools;
 			sourceTree = "<group>";
 		};
 		A5EA2EE31D49EBAA007217DE = {
@@ -154,7 +153,7 @@
 				A5227E1D1E8CF5350072AF69 /* AnimationViewController */,
 				A5227E171E8CF5350072AF69 /* AnimationRecordCell */,
 				A5227E1A1E8CF5350072AF69 /* AnimationRecordModel */,
-				A54304F01D4B4B0A00D7FB7E /* JhtShopCarAnimationSDK */,
+				A533D9B31F6BDEBD00A4DC93 /* JhtAnimationTools */,
 				A5EA2F2C1D49F5B1007217DE /* JhtTemp */,
 				A5EA2EF81D49EBAA007217DE /* Main.storyboard */,
 				A5EA2EFB1D49EBAA007217DE /* Assets.xcassets */,
@@ -334,6 +333,7 @@
 				A5227E201E8CF5350072AF69 /* AnimationRecordCell.m in Sources */,
 				A5227E211E8CF5350072AF69 /* AnimationRecordModel.m in Sources */,
 				A5227E221E8CF5350072AF69 /* AnimationViewController.m in Sources */,
+				A533D9B61F6BDEBD00A4DC93 /* JhtAnimationTools.m in Sources */,
 				A5EA2EF41D49EBAA007217DE /* AppDelegate.m in Sources */,
 				A5EA2EF11D49EBAA007217DE /* main.m in Sources */,
 			);
