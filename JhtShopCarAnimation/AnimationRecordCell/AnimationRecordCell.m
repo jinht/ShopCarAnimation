@@ -15,36 +15,67 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    
     if (self) {
-        // 去除选中的效果
         self.selectionStyle = UITableViewCellSeparatorStyleNone;
         
-        // 前边的图片
-        self.headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 5, 30, 30)];
-        [self.contentView addSubview:self.headerImageView];
+        [self.contentView addSubview:self.formerIcon];
+        [self.contentView addSubview:self.descLabel];
         
-        // 前边图片后边的label
-        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 0, 120, 40)];
-        self.titleLabel.textAlignment = NSTextAlignmentLeft;
-        self.titleLabel.font = [UIFont systemFontOfSize:15];
-        [self.contentView addSubview:self.titleLabel];
+        [self.contentView addSubview:self.deleteIcon];
+        [self.contentView addSubview:self.deleteBtn];
         
-        CGFloat frameW = [UIScreen mainScreen].bounds.size.width;
-        // 删除图标
-        self.wrongImageView = [[UIImageView alloc] initWithFrame:CGRectMake(frameW - 13 - 22, 9, 22, 22)];
-        [self.wrongImageView setImage:[UIImage imageNamed:@"项目删除"]];
-        [self.contentView addSubview:self.wrongImageView];
-        
-        // 扣在删除图标的btn
-        self.wrongBtn = [[UIButton alloc] initWithFrame:CGRectMake(frameW - 50, 0, 50, 40)];
-        [self.contentView addSubview:self.wrongBtn];
-        
-        // 底部的分割线
-        self.lineLabel = [[UILabel alloc] init];
-        self.lineLabel.backgroundColor = UIColorFromRGB(0xCCCCCC);
-        [self.contentView addSubview:self.lineLabel];
+        [self.contentView addSubview:self.lowLine];
     }
+    
     return self;
+}
+
+
+
+#pragma mark - Get
+- (UIImageView *)formerIcon {
+    if (!_formerIcon) {
+        _formerIcon = [[UIImageView alloc] initWithFrame:CGRectMake(10, 5, 30, 30)];
+    }
+    
+    return _formerIcon;
+}
+
+- (UILabel *)descLabel {
+    if (!_descLabel) {
+        _descLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 0, 120, 40)];
+        _descLabel.textAlignment = NSTextAlignmentLeft;
+        _descLabel.font = [UIFont systemFontOfSize:15];
+    }
+    
+    return _descLabel;
+}
+
+- (UIImageView *)deleteIcon {
+    if (!_deleteIcon) {
+        _deleteIcon = [[UIImageView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width - 13 - 22, 9, 22, 22)];
+        [_deleteIcon setImage:[UIImage imageNamed:@"deleteIcon"]];
+    }
+    
+    return _deleteIcon;
+}
+
+- (UIButton *)deleteBtn {
+    if (!_deleteBtn) {
+        _deleteBtn = [[UIButton alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width - 50, 0, 50, 40)];
+    }
+    
+    return _deleteBtn;
+}
+
+- (UILabel *)lowLine {
+    if (!_lowLine) {
+        _lowLine = [[UILabel alloc] init];
+        _lowLine.backgroundColor = UIColorFromRGB(0xCCCCCC);
+    }
+    
+    return _lowLine;
 }
 
 

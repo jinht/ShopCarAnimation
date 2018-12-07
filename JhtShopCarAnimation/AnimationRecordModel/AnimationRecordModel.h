@@ -14,10 +14,7 @@
 @interface AnimationRecordModel : NSObject
 
 #pragma mark - property
-#pragma mark required
-/** 图标路径 */
 @property (nonatomic, strong) NSString *record_icon;
-/** 解释文字 */
 @property (nonatomic, strong) NSString *record_name;
 
 

@@ -16,22 +16,18 @@ colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
-/** cell */
+/** Cell */
 @interface AnimationRecordCell : UITableViewCell
 
 #pragma mark - property
-/** 前边的图片 */
-@property (nonatomic, strong) UIImageView *headerImageView;
-/** 图片后边的文字 */
-@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIImageView *formerIcon;
+@property (nonatomic, strong) UILabel *descLabel;
 
-/** 删除ImageView */
-@property (nonatomic, strong) UIImageView *wrongImageView;
+@property (nonatomic, strong) UIImageView *deleteIcon;
+@property (nonatomic, strong) UIButton *deleteBtn;
 
-/** 删除btn */
-@property (nonatomic, strong) UIButton *wrongBtn;
-/** 底部的分割线 */
-@property (nonatomic, strong) UILabel *lineLabel;
+@property (nonatomic, strong) UILabel *lowLine;
 
  
 @end
+

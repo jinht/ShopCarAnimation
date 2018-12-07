@@ -16,8 +16,6 @@
 		A5EA2EFA1D49EBAA007217DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EA2EF81D49EBAA007217DE /* Main.storyboard */; };
 		A5EA2EFC1D49EBAA007217DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5EA2EFB1D49EBAA007217DE /* Assets.xcassets */; };
 		A5EA2EFF1D49EBAA007217DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EA2EFD1D49EBAA007217DE /* LaunchScreen.storyboard */; };
-		A5EA2F0A1D49EBAA007217DE /* JhtShopCarAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2F091D49EBAA007217DE /* JhtShopCarAnimationTests.m */; };
-		A5EA2F151D49EBAA007217DE /* JhtShopCarAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2F141D49EBAA007217DE /* JhtShopCarAnimationUITests.m */; };
 		A5EA2F2E1D49F5B1007217DE /* JhtShopCarAnimationImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5EA2F2D1D49F5B1007217DE /* JhtShopCarAnimationImages.bundle */; };
 /* End PBXBuildFile section */
 
@@ -56,11 +54,7 @@
 		A5EA2EFE1D49EBAA007217DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5EA2F001D49EBAA007217DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5EA2F051D49EBAA007217DE /* JhtShopCarAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhtShopCarAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5EA2F091D49EBAA007217DE /* JhtShopCarAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhtShopCarAnimationTests.m; sourceTree = "<group>"; };
-		A5EA2F0B1D49EBAA007217DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5EA2F101D49EBAA007217DE /* JhtShopCarAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhtShopCarAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5EA2F141D49EBAA007217DE /* JhtShopCarAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhtShopCarAnimationUITests.m; sourceTree = "<group>"; };
-		A5EA2F161D49EBAA007217DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5EA2F2D1D49F5B1007217DE /* JhtShopCarAnimationImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JhtShopCarAnimationImages.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,8 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				A5EA2EEE1D49EBAA007217DE /* JhtShopCarAnimation */,
-				A5EA2F081D49EBAA007217DE /* JhtShopCarAnimationTests */,
-				A5EA2F131D49EBAA007217DE /* JhtShopCarAnimationUITests */,
 				A5EA2EED1D49EBAA007217DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -170,24 +162,6 @@
 				A5EA2EF01D49EBAA007217DE /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A5EA2F081D49EBAA007217DE /* JhtShopCarAnimationTests */ = {
-			isa = PBXGroup;
-			children = (
-				A5EA2F091D49EBAA007217DE /* JhtShopCarAnimationTests.m */,
-				A5EA2F0B1D49EBAA007217DE /* Info.plist */,
-			);
-			path = JhtShopCarAnimationTests;
-			sourceTree = "<group>";
-		};
-		A5EA2F131D49EBAA007217DE /* JhtShopCarAnimationUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A5EA2F141D49EBAA007217DE /* JhtShopCarAnimationUITests.m */,
-				A5EA2F161D49EBAA007217DE /* Info.plist */,
-			);
-			path = JhtShopCarAnimationUITests;
 			sourceTree = "<group>";
 		};
 		A5EA2F2C1D49F5B1007217DE /* JhtTemp */ = {
@@ -265,7 +239,7 @@
 				TargetAttributes = {
 					A5EA2EEB1D49EBAA007217DE = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = BY48QUJK83;
+						DevelopmentTeam = 8C4D9692Z4;
 					};
 					A5EA2F041D49EBAA007217DE = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -343,7 +317,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5EA2F0A1D49EBAA007217DE /* JhtShopCarAnimationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +324,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5EA2F151D49EBAA007217DE /* JhtShopCarAnimationUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8C4D9692Z4;
 				INFOPLIST_FILE = JhtShopCarAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -494,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8C4D9692Z4;
 				INFOPLIST_FILE = JhtShopCarAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
