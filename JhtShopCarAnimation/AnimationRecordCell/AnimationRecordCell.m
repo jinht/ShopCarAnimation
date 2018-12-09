@@ -88,3 +88,10 @@
 }
 
 @end
+
+
+
+@implementation AnimationRecordModel
+
+
+@end

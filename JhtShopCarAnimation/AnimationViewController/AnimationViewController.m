@@ -12,7 +12,6 @@
 #import "AnimationViewController.h"
 #import "JhtAnimationTools.h"
 #import "AnimationRecordCell.h"
-#import "AnimationRecordModel.h"
 
 @interface AnimationViewController () <UITableViewDataSource, UITableViewDelegate, JhtAnimationToolsDelegate> {
     NSMutableArray *_sourceArray;
@@ -76,7 +75,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     [self.view addSubview:self.insideTableView];
     self.insideTableView.tableFooterView = self.tableFooterViewSC;
     
-    // 创建阻尼动画
+    // 阻尼动画
     [self aniCreateDampingUI];
 }
 
@@ -223,7 +222,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
             break;
         }
     }
-    // 提示 重复添加
+    
     if (isContain) {
         // 收起键盘
         [self.view endEditing:YES];
@@ -270,7 +269,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 /** 创建阻尼动画 */
 - (void)aniCreateDampingUI {
     // 开始动画
-    _downView = [self.animationTools aniDampingAnimationWithSuperView:self.view frame:CGRectMake(0, -250, FrameW, 250) backgroundColor:UIColorFromRGB(0xfd4444) isNeedBlackView:YES];
+    _downView = [self.animationTools aniDampingAnimationWithSuperView:self.view frame:CGRectMake(0, -250, FrameW, 250) backgroundColor:UIColorFromRGB(0xfd4444) haveBlackView:YES];
     [self.navigationController.view addSubview:_downView];
     [self.view bringSubviewToFront:_downView];
     

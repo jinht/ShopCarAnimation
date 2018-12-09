@@ -31,3 +31,15 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
  
 @end
 
+
+
+/** Model */
+@interface AnimationRecordModel : NSObject
+
+#pragma mark - property
+@property (nonatomic, strong) NSString *record_icon;
+@property (nonatomic, strong) NSString *record_name;
+
+
+@end
+
