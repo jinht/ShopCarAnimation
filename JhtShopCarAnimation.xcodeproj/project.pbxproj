@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		363A3BCA3E2B7820B5BC0EB4 /* libPods-JhtShopCarAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8B51FAF2217A6170512BAA /* libPods-JhtShopCarAnimation.a */; };
-		A5227E201E8CF5350072AF69 /* AnimationRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5227E191E8CF5350072AF69 /* AnimationRecordCell.m */; };
-		A5227E211E8CF5350072AF69 /* AnimationRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5227E1C1E8CF5350072AF69 /* AnimationRecordModel.m */; };
-		A5227E221E8CF5350072AF69 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5227E1F1E8CF5350072AF69 /* AnimationViewController.m */; };
+		8E163E2F21BD4BBD0078EAEF /* JhtAnimationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E163E2D21BD4BBD0078EAEF /* JhtAnimationTools.m */; };
+		A5227E0E1E8CF4740072AF69 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5227E0D1E8CF4740072AF69 /* AnimationViewController.m */; };
+		A5227E161E8CF4970072AF69 /* AnimationRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5227E151E8CF4970072AF69 /* AnimationRecordCell.m */; };
 		A5EA2EF11D49EBAA007217DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2EF01D49EBAA007217DE /* main.m */; };
 		A5EA2EF41D49EBAA007217DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EA2EF31D49EBAA007217DE /* AppDelegate.m */; };
 		A5EA2EFA1D49EBAA007217DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5EA2EF81D49EBAA007217DE /* Main.storyboard */; };
@@ -37,14 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		34728D61F286C7943E5D6D7A /* Pods-JhtShopCarAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JhtShopCarAnimation.release.xcconfig"; path = "Pods/Target Support Files/Pods-JhtShopCarAnimation/Pods-JhtShopCarAnimation.release.xcconfig"; sourceTree = "<group>"; };
-		724D74707D0306D6E6A86E11 /* Pods-JhtShopCarAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JhtShopCarAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JhtShopCarAnimation/Pods-JhtShopCarAnimation.debug.xcconfig"; sourceTree = "<group>"; };
-		A5227E181E8CF5350072AF69 /* AnimationRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationRecordCell.h; sourceTree = "<group>"; };
-		A5227E191E8CF5350072AF69 /* AnimationRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationRecordCell.m; sourceTree = "<group>"; };
-		A5227E1B1E8CF5350072AF69 /* AnimationRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationRecordModel.h; sourceTree = "<group>"; };
-		A5227E1C1E8CF5350072AF69 /* AnimationRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationRecordModel.m; sourceTree = "<group>"; };
-		A5227E1E1E8CF5350072AF69 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
-		A5227E1F1E8CF5350072AF69 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		8E163E2D21BD4BBD0078EAEF /* JhtAnimationTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhtAnimationTools.m; sourceTree = "<group>"; };
+		8E163E2E21BD4BBD0078EAEF /* JhtAnimationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhtAnimationTools.h; sourceTree = "<group>"; };
+		A5227E0C1E8CF4740072AF69 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		A5227E0D1E8CF4740072AF69 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		A5227E141E8CF4970072AF69 /* AnimationRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationRecordCell.h; sourceTree = "<group>"; };
+		A5227E151E8CF4970072AF69 /* AnimationRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationRecordCell.m; sourceTree = "<group>"; };
 		A5EA2EEC1D49EBAA007217DE /* JhtShopCarAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JhtShopCarAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5EA2EF01D49EBAA007217DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5EA2EF21D49EBAA007217DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,7 +53,6 @@
 		A5EA2F051D49EBAA007217DE /* JhtShopCarAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhtShopCarAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5EA2F101D49EBAA007217DE /* JhtShopCarAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhtShopCarAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5EA2F2D1D49F5B1007217DE /* JhtShopCarAnimationImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JhtShopCarAnimationImages.bundle; sourceTree = "<group>"; };
-		CB8B51FAF2217A6170512BAA /* libPods-JhtShopCarAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JhtShopCarAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				363A3BCA3E2B7820B5BC0EB4 /* libPods-JhtShopCarAnimation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,40 +80,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A5227E171E8CF5350072AF69 /* AnimationRecordCell */ = {
+		8E163E2C21BD4BBD0078EAEF /* JhtAnimationTools */ = {
 			isa = PBXGroup;
 			children = (
-				A5227E181E8CF5350072AF69 /* AnimationRecordCell.h */,
-				A5227E191E8CF5350072AF69 /* AnimationRecordCell.m */,
+				8E163E2E21BD4BBD0078EAEF /* JhtAnimationTools.h */,
+				8E163E2D21BD4BBD0078EAEF /* JhtAnimationTools.m */,
 			);
-			path = AnimationRecordCell;
+			path = JhtAnimationTools;
 			sourceTree = "<group>";
 		};
-		A5227E1A1E8CF5350072AF69 /* AnimationRecordModel */ = {
+		A5227E0B1E8CF4740072AF69 /* AnimationViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A5227E1B1E8CF5350072AF69 /* AnimationRecordModel.h */,
-				A5227E1C1E8CF5350072AF69 /* AnimationRecordModel.m */,
-			);
-			path = AnimationRecordModel;
-			sourceTree = "<group>";
-		};
-		A5227E1D1E8CF5350072AF69 /* AnimationViewController */ = {
-			isa = PBXGroup;
-			children = (
-				A5227E1E1E8CF5350072AF69 /* AnimationViewController.h */,
-				A5227E1F1E8CF5350072AF69 /* AnimationViewController.m */,
+				A5227E0C1E8CF4740072AF69 /* AnimationViewController.h */,
+				A5227E0D1E8CF4740072AF69 /* AnimationViewController.m */,
 			);
 			path = AnimationViewController;
+			sourceTree = "<group>";
+		};
+		A5227E131E8CF4970072AF69 /* AnimationRecordCell */ = {
+			isa = PBXGroup;
+			children = (
+				A5227E141E8CF4970072AF69 /* AnimationRecordCell.h */,
+				A5227E151E8CF4970072AF69 /* AnimationRecordCell.m */,
+			);
+			path = AnimationRecordCell;
 			sourceTree = "<group>";
 		};
 		A5EA2EE31D49EBAA007217DE = {
 			isa = PBXGroup;
 			children = (
+				8E163E2C21BD4BBD0078EAEF /* JhtAnimationTools */,
 				A5EA2EEE1D49EBAA007217DE /* JhtShopCarAnimation */,
 				A5EA2EED1D49EBAA007217DE /* Products */,
-				D6199F144832B89DD38E3906 /* Pods */,
-				ED6941F8508F81E0975CFD3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,9 +131,8 @@
 			children = (
 				A5EA2EF21D49EBAA007217DE /* AppDelegate.h */,
 				A5EA2EF31D49EBAA007217DE /* AppDelegate.m */,
-				A5227E1D1E8CF5350072AF69 /* AnimationViewController */,
-				A5227E171E8CF5350072AF69 /* AnimationRecordCell */,
-				A5227E1A1E8CF5350072AF69 /* AnimationRecordModel */,
+				A5227E0B1E8CF4740072AF69 /* AnimationViewController */,
+				A5227E131E8CF4970072AF69 /* AnimationRecordCell */,
 				A5EA2F2C1D49F5B1007217DE /* JhtTemp */,
 				A5EA2EF81D49EBAA007217DE /* Main.storyboard */,
 				A5EA2EFB1D49EBAA007217DE /* Assets.xcassets */,
@@ -166,23 +159,6 @@
 			path = JhtTemp;
 			sourceTree = "<group>";
 		};
-		D6199F144832B89DD38E3906 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				724D74707D0306D6E6A86E11 /* Pods-JhtShopCarAnimation.debug.xcconfig */,
-				34728D61F286C7943E5D6D7A /* Pods-JhtShopCarAnimation.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		ED6941F8508F81E0975CFD3E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CB8B51FAF2217A6170512BAA /* libPods-JhtShopCarAnimation.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,7 +166,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5EA2F191D49EBAA007217DE /* Build configuration list for PBXNativeTarget "JhtShopCarAnimation" */;
 			buildPhases = (
-				4CC3450F6D20FDEE5FBD4BE6 /* [CP] Check Pods Manifest.lock */,
 				A5EA2EE81D49EBAA007217DE /* Sources */,
 				A5EA2EE91D49EBAA007217DE /* Frameworks */,
 				A5EA2EEA1D49EBAA007217DE /* Resources */,
@@ -247,7 +222,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = Jht;
+				ORGANIZATIONNAME = JhtShopCarAnimation;
 				TargetAttributes = {
 					A5EA2EEB1D49EBAA007217DE = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -311,37 +286,16 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4CC3450F6D20FDEE5FBD4BE6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JhtShopCarAnimation-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		A5EA2EE81D49EBAA007217DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5227E201E8CF5350072AF69 /* AnimationRecordCell.m in Sources */,
-				A5227E211E8CF5350072AF69 /* AnimationRecordModel.m in Sources */,
-				A5227E221E8CF5350072AF69 /* AnimationViewController.m in Sources */,
 				A5EA2EF41D49EBAA007217DE /* AppDelegate.m in Sources */,
 				A5EA2EF11D49EBAA007217DE /* main.m in Sources */,
+				A5227E0E1E8CF4740072AF69 /* AnimationViewController.m in Sources */,
+				8E163E2F21BD4BBD0078EAEF /* JhtAnimationTools.m in Sources */,
+				A5227E161E8CF4970072AF69 /* AnimationRecordCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,39 +432,31 @@
 		};
 		A5EA2F1A1D49EBAA007217DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 724D74707D0306D6E6A86E11 /* Pods-JhtShopCarAnimation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8C4D9692Z4;
 				INFOPLIST_FILE = JhtShopCarAnimation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/JhtShopCarAnimation/JhtShopCarAnimationSDK",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jht.JhtShopCarAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JhtShopCarAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A5EA2F1B1D49EBAA007217DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34728D61F286C7943E5D6D7A /* Pods-JhtShopCarAnimation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8C4D9692Z4;
 				INFOPLIST_FILE = JhtShopCarAnimation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/JhtShopCarAnimation/JhtShopCarAnimationSDK",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jht.JhtShopCarAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JhtShopCarAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

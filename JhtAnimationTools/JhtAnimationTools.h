@@ -50,7 +50,7 @@ extern NSInteger const ATBlackViewTag;
  *  expandAnimationTime: 动画变大 时间
  *  narrowAnimationTime: 动画变小 时间
  *  animationValue: 动画变大过程中，变为原来的几倍大
- *  注意: 如果动画过程中，你不想让图片变大变小，保持原来的大小运动，传值如下:
+ *  注: 如果动画过程中，你不想让图片变大变小，保持原来的大小运动，传值如下
  *       expandAnimationTime: 0.0f
  *       narrowAnimationTime: 动画总 时间
  *       animationValue: 1.0f
@@ -59,13 +59,13 @@ extern NSInteger const ATBlackViewTag;
 
 
 #pragma mark 阻尼动画
-/** 获取的阻尼动画的View
+/** 阻尼动画的View
  *  view: 黑色背景View 父view（eg: self.view）
- *  frame: 这个阻尼View 坐标
+ *  frame: 阻尼View 坐标
  *  isBlack: YES 需要出现黑色背景，NO 不需要出现黑色背景
  *  bgColor: 背景颜色
  */
-- (UIView *)aniDampingAnimationWithSuperView:(UIView *)view frame:(CGRect)frame backgroundColor:(UIColor *)bgColor isNeedBlackView:(BOOL)isBlack;
+- (UIView *)aniDampingAnimationWithSuperView:(UIView *)view frame:(CGRect)frame backgroundColor:(UIColor *)bgColor haveBlackView:(BOOL)haveBlackView;
 /** 开始阻尼动画 */
 - (void)aniStartDampingAnimation;
 /** 关闭阻尼动画 */

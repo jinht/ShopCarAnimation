@@ -16,10 +16,9 @@
     // 矢量路径
     UIBezierPath *_shopPath;
     
-    // 阻尼View
-    UIView *_dampingView;
     // 黑色背景View 父view
     UIView *_superView;
+    UIView *_dampingView;
 }
 
 @end
@@ -138,7 +137,7 @@ NSInteger const ATBlackViewTag = 222;
 
 
 #pragma mark - 阻尼动画
-- (UIView *)aniDampingAnimationWithSuperView:(UIView *)view frame:(CGRect)frame backgroundColor:(UIColor *)bgColor isNeedBlackView:(BOOL)isBlack {
+- (UIView *)aniDampingAnimationWithSuperView:(UIView *)view frame:(CGRect)frame backgroundColor:(UIColor *)bgColor haveBlackView:(BOOL)haveBlackView {
     _superView = view;
     UIView *downView = [[UIView alloc] initWithFrame:frame];
     downView.backgroundColor = bgColor;
@@ -147,7 +146,7 @@ NSInteger const ATBlackViewTag = 222;
     downView.hidden = NO;
     _dampingView = downView;
     
-    if (isBlack) {
+    if (haveBlackView) {
         // 黑色 背景View
         UIView *allView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), CGRectGetHeight([UIScreen mainScreen].bounds))];
         allView.backgroundColor = [UIColor blackColor];
