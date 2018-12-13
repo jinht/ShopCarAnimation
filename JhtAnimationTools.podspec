@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     
     s.name                       = 'JhtAnimationTools'
-    s.version                    = '1.0.4'
+    s.version                    = '1.0.6'
     s.summary                    = '购物车类的抛物线动画 && 阻尼动画'
     s.homepage                   = 'https://github.com/jinht/ShopCarAnimation'
     s.license                    = { :type => 'MIT', :file => 'LICENSE' }
