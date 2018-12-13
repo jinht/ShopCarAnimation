@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.platform                   = :ios
     s.ios.deployment_target      = '8.0'
     s.source                     = { :git => 'https://github.com/jinht/ShopCarAnimation.git', :tag => s.version }
-    s.source_files               = 'JhtAnimationTools/*.{h,m}'
+    s.source_files               = '*.{h,m}'
     s.frameworks                 = 'UIKit'
 
 end
