@@ -12,7 +12,7 @@ platform:ios, '8.0'
 
 target '*****' do
 
-pod 'JhtAnimationTools', '~> 1.0.6'
+pod 'JhtAnimationTools'
         
 end
 ```
