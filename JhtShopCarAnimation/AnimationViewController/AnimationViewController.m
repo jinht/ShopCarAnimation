@@ -69,13 +69,11 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     
     self.navigationItem.titleView = self.navBarLabel;
     
-    // 初始化相关控件和参数
     [self animationInit];
     
     [self.view addSubview:self.insideTableView];
     self.insideTableView.tableFooterView = self.tableFooterViewSC;
     
-    // 阻尼动画
     [self aniCreateDampingUI];
 }
 
@@ -84,17 +82,13 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #pragma mark - init param
 /** 初始化相关控件和参数 */
 - (void)animationInit {
-    // 数据源数组
     _sourceArray = [[NSMutableArray alloc] init];
-    
-    // 底部的数据源数组
     _tableFooterViewDataArray = [[NSMutableArray alloc] init];
     
     NSArray *titleArray = @[@"滑板", @"击剑", @"课间操", @"篮球", @"爬山", @"跑步", @"乒乓球", @"散步", @"跆拳道", @"踢毽子", @"跳绳", @"跳舞", @"网球", @"游泳", @"体操", @"自行车", @"足球"];
     for (NSInteger i = 0; i < titleArray.count; i ++) {
-        // 获取bundle中的动画图片
         NSString *loadImageDic = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"JhtShopCarAnimationImages.bundle"];
-        NSString *loadImagePath = [loadImageDic stringByAppendingPathComponent:[NSString stringWithFormat:@"%ld", i]];
+        NSString *loadImagePath = [loadImageDic stringByAppendingPathComponent:[NSString stringWithFormat:@"%ld", (long)i]];
         AnimationRecordModel *model = [[AnimationRecordModel alloc] init];
         model.record_icon = loadImagePath;
         model.record_name = titleArray[i];
@@ -147,21 +141,17 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         _tableFooterViewSC.backgroundColor = UIColorFromRGB(0xFAFAFA);
         _tableFooterViewSC.showsHorizontalScrollIndicator = NO;
         
-        // 生成一堆小的项目图标&文字
         for (NSInteger i = 0; i < _tableFooterViewDataArray.count; i ++) {
             AnimationRecordModel *model = [_tableFooterViewDataArray objectAtIndex:i];
-            // 小图标和小图标下边label的背景
             UIView *smallView = [[UIView alloc] initWithFrame:CGRectMake(45 / 2 + i % 5 * (30 + space), 15 + i / 5 * (95 / 2 + 17), (30 + space), 95 / 2)];
             smallView.tag = 100 + i;
             
-            // 小图标
             UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
             imageView.tag = 200 + i;
             imageView.userInteractionEnabled = YES;
             imageView.image = [UIImage imageWithContentsOfFile:model.record_icon];
             [smallView addSubview:imageView];
             
-            // 小图标下边的文字
             UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(-12, 68 / 2, CGRectGetWidth(imageView.frame) + 24, (95 - 68) / 2)];
             label.text = model.record_name;
             label.font = [UIFont systemFontOfSize:12];
@@ -177,7 +167,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
             [smallView addSubview:btn];
             [_tableFooterViewSC addSubview:smallView];
             _tableFooterViewSC.frame = CGRectMake(0, 0, FrameW, height);
-            _tableFooterViewSC.contentSize = CGSizeMake(FrameW, 15 + (_tableFooterViewDataArray.count - 1) / 5 * (95 / 2 + 34 / 2) + 95 / 2);
+            _tableFooterViewSC.contentSize = CGSizeMake(FrameW, 15 + (_tableFooterViewDataArray.count - 1) / 5 * (95 / 2.0 + 34 / 2.0) + 95 / 2.0);
         }
     }
     
@@ -197,7 +187,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #pragma mark Get Method
 - (void)aniFootViewBtnClick:(UIButton *)btn {
     if (_sourceArray.count >= 11) {
-        // 收起键盘
         [self.view endEditing:YES];
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"可以上传11个以下项目！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alertView show];
@@ -208,7 +197,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     NSInteger index = btn.tag - 400;
     UIView *smallView = btn.superview;
     
-    // model转换
+    // model change
     AnimationRecordModel *model = [_tableFooterViewDataArray objectAtIndex:index];
     _selectedModel = [[AnimationRecordModel alloc] init];
     _selectedModel.record_icon = model.record_icon;
@@ -224,7 +213,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     }
     
     if (isContain) {
-        // 收起键盘
         [self.view endEditing:YES];
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"您已选择此项目！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alertView show];
@@ -242,7 +230,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 /** 购物车动画 */
 - (void)anistartShopCarAnimationWithRect:(CGRect)rect ImageView:(UIImageView *)imageView {
-    // 动画结束点
     CGPoint lastPoint = CGPointMake(10 + 30 / 2, 5 + 30 / 2);
     /********** 用默认的时候这些都不用写 ************/
     // 我找个中间控制点，但是我想判断是从上向下抛物线 还是 从下向上抛物线
@@ -254,12 +241,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     // 控制点
     CGPoint controlPoint = CGPointMake(b + lastPointToStartPoint / 3, 0);
     /********** 用默认的时候这些都不用写 ************/
-    // 非默认 控制点 的例子
-    //    [self.animationTools aniStartShopCarAnimationWithStartRect:rect withImageView:imageView superView:self.view withEndPoint:lastPoint withControlPoint:controlPoint withStartToEndSpacePercentage:-1 withExpandAnimationTime:0.5 withNarrowAnimationTime:0.5 withAnimationValue:2.0f];
-    
-    // 动画过程中，大小不变 的例子
-    //    [self.animationTools aniStartShopCarAnimationWithStartRect:rect withImageView:imageView superView:self.view withEndPoint:lastPoint withControlPoint:CGPointZero withStartToEndSpacePercentage:4 withExpandAnimationTime:0.0f  withNarrowAnimationTime:0.8f withAnimationValue:1.0f];
-    // 用默认控制点 的例子
+ 
+    // 使用 默认控制点
     [self.animationTools aniStartShopCarAnimationWithStartRect:rect imageView:imageView superView:self.view endPoint:lastPoint controlPoint:CGPointZero startToEndSpacePercentage:4 expandAnimationTime:0.5f narrowAnimationTime:0.5f animationValue:2.0f];
 }
 
@@ -268,7 +251,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #pragma mark - DampingAnimation
 /** 创建阻尼动画 */
 - (void)aniCreateDampingUI {
-    // 开始动画
     _downView = [self.animationTools aniDampingAnimationWithSuperView:self.view frame:CGRectMake(0, -250, FrameW, 250) backgroundColor:UIColorFromRGB(0xfd4444) haveBlackView:YES];
     [self.navigationController.view addSubview:_downView];
     [self.view bringSubviewToFront:_downView];
@@ -278,7 +260,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     UIView *vv = [self.view viewWithTag:ATBlackViewTag];
 //    NSLog(@"%lf~~~~~%lf", vv.frame.size.width, vv.frame.origin.y);
     
-    // 如果你后续想往 这个downView上添加东西，都可以写在外面了，因为downView已经暴露出来了
     UILabel *showLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (CGRectGetHeight(_downView.frame) - CGRectGetHeight(_downView.frame) / 2) / 2 + 50, CGRectGetWidth(_downView.frame), CGRectGetHeight(_downView.frame) / 2)];
     showLabel.text = @"Wow，这你都试出来啦!" ;
     showLabel.font = [UIFont boldSystemFontOfSize:18];
@@ -292,7 +273,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 /** 开始阻尼动画 */
 - (void)starDampingAnimation {
-    // 开始动画
     [[JhtAnimationTools sharedInstance] aniStartDampingAnimation];
 }
 
@@ -322,23 +302,24 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         AnimationRecordModel *model = [_sourceArray objectAtIndex:indexPath.row];
         cell.formerIcon.image = [UIImage imageWithContentsOfFile:model.record_icon];
         cell.descLabel.text = model.record_name;
-        // 设置最下边那个cell底部线的坐标
+        
         if (indexPath.row != _sourceArray.count - 1) {
             cell.lowLine.frame = CGRectMake(100 / 2, 40 - 0.6, FrameW - 100 / 2, 0.6);
         } else {
             cell.lowLine.frame = CGRectMake(0, 40 - 0.6, FrameW, 0.6);
         }
         
-        // 尾部的删除按钮
+        // 尾部删除按钮
         cell.deleteBtn.tag = 300 + indexPath.row;
         [cell.deleteBtn addTarget:self action:@selector(aniDeleteCellBtn:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
+        
     } else {
         // 无数据
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"kong"];
         if (!cell) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kong"];
-            // 底部的分割线
+            
             UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 40 - 0.6, FrameW, 0.6)];
             lineLabel.backgroundColor = [UIColor colorWithRed:0.90 green:0.90 blue:0.90 alpha:1.00];
             [cell.contentView addSubview:lineLabel];
@@ -354,11 +335,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 
 #pragma mark UITableViewDelegate Method
-/** 删除某一个cell */
 - (void)aniDeleteCellBtn:(UIButton *)btn {
-    // 数据源数组中所对应的位置
     NSInteger index = btn.tag - 300;
-    // 删除对应的数据源model并刷新tableView
     [_sourceArray removeObjectAtIndex:index];
     [self.insideTableView reloadData];
     

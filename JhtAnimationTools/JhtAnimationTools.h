@@ -13,7 +13,7 @@
 
 @protocol JhtAnimationToolsDelegate <NSObject>
 /** 委托
- *  type == 0 购物车 动画  type == 1 阻尼动画
+ *  type == 0 购物车 动画 type == 1 阻尼动画
  *  isStop: YES 动画结束，NO 动画过程中
  */
 - (void)JhtAnimationWithType:(NSInteger)type isDidStop:(BOOL)isStop;
@@ -51,9 +51,9 @@ extern NSInteger const ATBlackViewTag;
  *  narrowAnimationTime: 动画变小 时间
  *  animationValue: 动画变大过程中，变为原来的几倍大
  *  注: 如果动画过程中，你不想让图片变大变小，保持原来的大小运动，传值如下
- *       expandAnimationTime: 0.0f
- *       narrowAnimationTime: 动画总 时间
- *       animationValue: 1.0f
+ *      expandAnimationTime: 0.0f
+ *      narrowAnimationTime: 动画总 时间
+ *      animationValue: 1.0f
  */
 - (void)aniStartShopCarAnimationWithStartRect:(CGRect)rect imageView:(UIImageView *)imageView superView:(UIView *)view endPoint:(CGPoint)lastPoint controlPoint:(CGPoint)controlPoint startToEndSpacePercentage:(NSInteger)per expandAnimationTime:(CFTimeInterval)expandAnimationTime narrowAnimationTime:(CFTimeInterval)narrowAnimationTime animationValue:(CGFloat)animationValue;
 
@@ -66,10 +66,12 @@ extern NSInteger const ATBlackViewTag;
  *  bgColor: 背景颜色
  */
 - (UIView *)aniDampingAnimationWithSuperView:(UIView *)view frame:(CGRect)frame backgroundColor:(UIColor *)bgColor haveBlackView:(BOOL)haveBlackView;
+
 /** 开始阻尼动画 */
 - (void)aniStartDampingAnimation;
 /** 关闭阻尼动画 */
 - (void)aniCloseDampingAnimation;
+
 /** 获取阻尼动画 黑色背景 */
 - (UIView *)aniGetDampingBlackView;
 
